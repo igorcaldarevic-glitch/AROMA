@@ -314,7 +314,7 @@
     <nav class="fixed top-0 z-50 w-full py-8 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <!-- Left: Logo -->
-            <a href="index.html" class="block w-10 md:w-32 relative group flex-shrink-0">
+            <a href="index.html" class="block w-10 md:w-32 relative group flex-shrink-0 transition-all duration-300">
                 <img src="images/webp/AROMA.webp" alt="AROMA Logo" class="w-full h-auto opacity-0" width="96" height="40">
                 <div class="absolute inset-0 bg-aroma-gold transition-opacity duration-300"
                     style="-webkit-mask: url(images/webp/AROMA.webp) no-repeat center; mask: url(images/webp/AROMA.webp) no-repeat center; -webkit-mask-size: contain; mask-size: contain;">
@@ -2807,7 +2807,7 @@
                                         </div>
                                     </div>
                                     ${sviOkusiItem.image ? `<div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden" style="border: 2px solid rgba(197,160,89,0.65); box-shadow: 0 0 0 1px rgba(197,160,89,0.15);" onclick="event.stopPropagation(); openImageModal('${sviOkusiItem.image}', '${sviOkusiItem.name}')">
-                                        <img src="${sviOkusiItem.image}" alt="${sviOkusiItem.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                        <img src="${sviOkusiItem.image}" alt="${sviOkusiItem.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" width="128" height="128">
                                     </div>` : ''}
                                 </div>
                             </div>
@@ -2833,7 +2833,7 @@
                                             </div>
                                         </div>
                                         ${item.image ? `<div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden cursor-zoom-in" style="border: 2px solid rgba(197,160,89,0.65); box-shadow: 0 0 0 1px rgba(197,160,89,0.15);" onclick="event.stopPropagation(); openImageModal('${item.image}', '${item.name}')">
-                                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" width="128" height="128">
                                         </div>` : ''}
                                     </div>
                                 </div>
@@ -2859,7 +2859,7 @@
                                         </div>
                                     </div>
                                     ${item.image ? `<div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden cursor-zoom-in" style="border: 2px solid rgba(197,160,89,0.65); box-shadow: 0 0 0 1px rgba(197,160,89,0.15);" onclick="openImageModal('${item.image}', '${item.name}')">
-                                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" width="128" height="128">
                                     </div>` : ''}
                                 </div>
                             </div>
@@ -2902,7 +2902,7 @@
                                     </div>
                                 </div>
                                 ${item.image ? `<div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden cursor-zoom-in" style="border: 2px solid rgba(197,160,89,0.65); box-shadow: 0 0 0 1px rgba(197,160,89,0.15);" onclick="openImageModal('${item.image}', '${item.name}')">
-                                    <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                    <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" width="128" height="128">
                                 </div>` : ''}
                             </div>
                         </div>
@@ -3203,6 +3203,11 @@
                 logo.classList.remove('w-8', 'md:w-24');
                 logo.classList.add('w-10', 'md:w-32');
             }
+
+            // Logo opacity on scroll
+            const logoHidden = scrollY > 80;
+            logo.classList.toggle('opacity-0', logoHidden);
+            logo.classList.toggle('pointer-events-none', logoHidden);
 
             // Back to top button visibility
             if (scrollY > 500) {
