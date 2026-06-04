@@ -1,0 +1,3731 @@
+﻿<!DOCTYPE html>
+<!-- AROMA_CONTROL_STRING_12345 -->
+<html lang="hr" class="scroll-smooth overflow-x-hidden">
+
+<head>
+    <!-- Dark Mode Flicker Prevention -->
+    <script>
+        // Inline script to prevent flash of unstyled content (FOUC) for dark mode
+        (function () {
+            const theme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (theme === 'dark' || (!theme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Slastičarna - Jelovnik | Menu</title>
+    <meta name="description"
+        content="Aroma Slastičarna Jelovnik - Gelato od 1.50€, Kava od 1.30€, Torte, Palačinke. Trg IB Mažuranić 6, Slavonski Brod ☎ +385 35 352 034 📍 Wolt/Glovo dostava">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/webp/amblem.webp">
+
+    <!-- Preconnect hints for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <link rel="stylesheet" href="tailwind.css">
+
+
+
+    <style>
+        /* Local Font Faces */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/playfair-display-v40-latin-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/playfair-display-v40-latin-italic.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url('fonts/montserrat-v31-latin-300.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/montserrat-v31-latin-400.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('fonts/montserrat-v31-latin-600.woff2') format('woff2');
+        }
+    </style>
+
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        /* Menu card hover effects */
+        .menu-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Mobile menu link hover effects */
+        .mobile-link:hover img {
+            transform: scale(1.2) rotate(5deg);
+            filter: drop-shadow(0 0 8px rgba(197, 160, 89, 0.8));
+        }
+        
+        .mobile-link img {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* Mobile menu active state */
+        .mobile-link.active {
+            color: #c5a059 !important;
+        }
+        
+        .mobile-link.active img,
+        .mobile-link.active svg {
+            filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.6));
+        }
+
+        /* Category link active state */
+        .category-link.active .w-14 {
+            background: rgba(197, 160, 89, 0.3) !important;
+            border-color: rgba(197, 160, 89, 0.8) !important;
+            border-width: 3px;
+        }
+        
+        .category-link.active span {
+            color: #c5a059 !important;
+            font-weight: 700;
+        }
+
+        /* Category section fade animation */
+        .category-section {
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .category-section.fade-out {
+            opacity: 0;
+        }
+
+        /* Tablet Optimizations (768px - 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            /* Navigation Optimizations */
+            nav .max-w-7xl {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            /* Hero Title - Larger for tablets */
+            section h2 {
+                font-size: 4rem !important;
+            }
+
+            /* Hero subtitle */
+            section p {
+                font-size: 1.35rem !important;
+            }
+
+            /* Category headings */
+            section h3 {
+                font-size: 3.5rem !important;
+            }
+
+            /* Better spacing */
+            section {
+                margin-bottom: 6rem !important;
+            }
+        }
+
+        /* Wider Tablet Optimizations (1024px - 1280px) */
+        @media (min-width: 1024px) and (max-width: 1280px) {
+
+            /* Ensure hamburger menu instead of cloud menu */
+            nav .max-w-7xl {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        /* Mobile Stacked Cards */
+        @media (max-width: 767px) {
+            .mobile-stack-grid {
+                display: flex !important;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .stack-card-wrapper {
+                position: sticky;
+                top: 72px;
+                transform-origin: top center;
+                will-change: transform, filter;
+            }
+        }
+
+        /* Show grid on tablet and desktop */
+        @media (min-width: 768px) {
+            .mobile-stack-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-stack-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Modal Styles */
+        #image-modal {
+            transition: opacity 0.3s ease-out, visibility 0.3s;
+        }
+
+        #image-modal.hidden {
+            opacity: 0;
+            visibility: hidden;
+            display: flex !important;
+            /* Keep flex but hide via opacity/visibility */
+        }
+
+        #modal-content {
+            transition: transform 0.3s ease-out;
+        }
+
+        #image-modal.hidden #modal-content {
+            transform: scale(0.9);
+        }
+
+        #modal-image {
+            border: 1px solid rgba(212, 175, 55, 0.55);
+            border-radius: 0.75rem;
+            box-shadow: 0 0 0 1px rgba(212,175,55,0.18), 0 8px 48px 0 rgba(0,0,0,0.7);
+        }
+
+        /* Dubai zlatni glow efekt */
+        @keyframes gold-cloud-glow {
+            0%   { box-shadow: 0 0 0px rgba(212,175,55,0); transform: translateY(0) scale(1); }
+            15%  { box-shadow: 0 0 45px 22px rgba(212,175,55,0.6), 0 24px 70px 14px rgba(212,175,55,0.35); transform: translateY(-8px) scale(1.012); }
+            50%  { box-shadow: 0 0 75px 35px rgba(212,175,55,0.42), 0 35px 100px 24px rgba(180,140,30,0.22); transform: translateY(-5px) scale(1.008); }
+            85%  { box-shadow: 0 0 45px 22px rgba(212,175,55,0.22), 0 24px 70px 14px rgba(212,175,55,0.10); transform: translateY(-2px) scale(1.003); }
+            100% { box-shadow: 0 0 0px rgba(212,175,55,0); transform: translateY(0) scale(1); }
+        }
+        .dubai-gold-glow {
+            animation: gold-cloud-glow 3.6s ease-in-out forwards;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* ✅ Image Protection - Prevent Download/Copy */
+        img {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            pointer-events: auto;
+        }
+
+        /* Prevent text selection on image containers */
+        .menu-card, .stack-card-wrapper, nav img {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Additional layer protection */
+        img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            pointer-events: none;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2D0STMCEQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S2D0STMCEQ');
+    </script>
+</head>
+
+<body
+    class="antialiased font-sans relative bg-gradient-to-br from-[#f7fcf0] via-[#e6f5d0] to-[#d5e8b3] min-h-screen text-gray-900 dark:bg-none dark:bg-[#0f0f0f] dark:text-white transition-colors duration-300">
+
+    <!-- Background Texture -->
+    <div class="fixed inset-0 z-0 opacity-5 dark:opacity-5 pointer-events-none mix-blend-multiply dark:mix-blend-normal"
+        style="background-image: url('images/papira.png'); background-repeat: repeat; background-size: 500px;"></div>
+
+    <!-- Parallax Orbs -->
+    <div id="orb1"
+        class="fixed pointer-events-none z-0 w-[400px] h-[400px] rounded-full opacity-20 dark:opacity-10 blur-3xl"
+        style="background: radial-gradient(circle, #C5A059, transparent); top: 10%; left: -10%;"></div>
+    <div id="orb2"
+        class="fixed pointer-events-none z-0 w-[350px] h-[350px] rounded-full opacity-15 dark:opacity-10 blur-3xl"
+        style="background: radial-gradient(circle, #a0c878, transparent); top: 40%; right: -8%;"></div>
+    <div id="orb3"
+        class="fixed pointer-events-none z-0 w-[300px] h-[300px] rounded-full opacity-20 dark:opacity-10 blur-3xl"
+        style="background: radial-gradient(circle, #C5A059, transparent); bottom: 10%; left: 20%;"></div>
+
+    <nav class="fixed top-0 z-50 w-full py-8 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <!-- Left: Logo -->
+            <a href="index.html" class="block w-10 md:w-32 relative group flex-shrink-0">
+                <img src="images/webp/AROMA.webp" alt="AROMA Logo" class="w-full h-auto opacity-0" width="96" height="40">
+                <div class="absolute inset-0 bg-aroma-gold transition-opacity duration-300"
+                    style="-webkit-mask: url(images/webp/AROMA.webp) no-repeat center; mask: url(images/webp/AROMA.webp) no-repeat center; -webkit-mask-size: contain; mask-size: contain;">
+                </div>
+            </a>
+
+            <!-- Center: The Cloud Menu -->
+            <div class="hidden xl:flex items-center justify-center absolute left-1/2 -translate-x-1/2">
+                <div
+                    class="px-8 py-3 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-xl shadow-lg flex space-x-8 transition-all hover:bg-black/10 dark:hover:bg-white/10 hover:border-black/20 dark:hover:border-white/20 hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-white/5">
+                    <a href="#topli-napici"
+                        class="text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;"
+                        data-i18n="nav_hot_drinks">Topli Napici</a>
+                    <a href="#bezalkoholna-pica"
+                        class="text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;"
+                        data-i18n="nav_soft_drinks">Bezalkoholna pića</a>
+                    <a href="#smoothie"
+                        class="text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;"
+                        data-i18n="nav_smoothie">Smoothie</a>
+                    <a href="#kolaci"
+                        class="text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;"
+                        data-i18n="nav_pastries">Kolači</a>
+                    <a href="#palacinke"
+                        class="text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;"
+                        data-i18n="nav_pancakes">Palačinke</a>
+                    <a href="#sladoled"
+                        class="text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;"
+                        data-i18n="nav_icecream">Sladoled</a>
+                </div>
+            </div>
+
+            <!-- Mobile & Tablet Menu Button & Theme Toggle -->
+            <div class="xl:hidden flex items-center gap-2">
+                <button id="mobile-theme-toggle-nav"
+                    class="px-3 py-3 rounded-full bg-white dark:bg-gray-800 shadow-lg transition-all hover:scale-105 flex items-center justify-center">
+                    <!-- Sun Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5 hidden dark:block text-aroma-gold">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5 block dark:hidden text-aroma-gold">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                    </svg>
+                </button>
+                <button id="mobile-menu-btn" class="relative z-50 p-2 text-black dark:text-white">
+                    <!-- Hamburger Icon (pokazuje se kad je menu zatvoren) -->
+                    <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-8 h-8 transition-all">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!-- X Icon (pokazuje se kad je menu otvoren) -->
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hidden transition-all">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile & Tablet Menu Overlay -->
+            <div id="mobile-menu"
+                class="fixed inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-6 xl:hidden">
+                <a href="#topli-napici" class="mobile-link category-link flex items-center gap-3 text-2xl font-serif text-black dark:text-white" data-category="topli-napici">
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="images/menu-webp/ikone/kava2.webp" alt="Kave" class="w-8 h-8 object-contain" width="32" height="32">
+                    </div>
+                    <span data-i18n="nav_hot_drinks">Kave</span>
+                </a>
+                <a href="#bezalkoholna-pica" class="mobile-link category-link flex items-center gap-3 text-2xl font-serif text-black dark:text-white" data-category="bezalkoholna-pica">
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="images/menu-webp/ikone/bezalkoholna.webp" alt="Bezalkoholna pića" class="w-8 h-8 object-contain" width="32" height="32">
+                    </div>
+                    <span data-i18n="nav_soft_drinks">Pića</span>
+                </a>
+                <a href="#smoothie" class="mobile-link category-link flex items-center gap-3 text-2xl font-serif text-black dark:text-white" data-category="smoothie">
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="images/menu-webp/ikone/smoothi.webp" alt="Smoothie" class="w-8 h-8 object-contain" width="32" height="32">
+                    </div>
+                    <span data-i18n="nav_smoothie">Smoothie</span>
+                </a>
+                <a href="#kolaci" class="mobile-link category-link flex items-center gap-3 text-2xl font-serif text-black dark:text-white" data-category="kolaci">
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="images/menu-webp/ikone/kolaci.webp" alt="Kolači" class="w-8 h-8 object-contain" width="32" height="32">
+                    </div>
+                    <span data-i18n="nav_pastries">Kolači</span>
+                </a>
+                <a href="#palacinke" class="mobile-link category-link flex items-center gap-3 text-2xl font-serif text-black dark:text-white" data-category="palacinke">
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="images/menu-webp/ikone/palacinka.webp" alt="Palačinke" class="w-8 h-8 object-contain" width="32" height="32">
+                    </div>
+                    <span data-i18n="nav_pancakes">Palačinke</span>
+                </a>
+                <a href="#sladoled" class="mobile-link category-link flex items-center gap-3 text-2xl font-serif text-black dark:text-white" data-category="sladoled">
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="images/menu-webp/ikone/sladoled.webp" alt="Sladoled" class="w-8 h-8 object-contain" width="32" height="32">
+                    </div>
+                    <span data-i18n="nav_icecream">Sladoled</span>
+                </a>
+
+                <!-- Mobile Language & Theme -->
+                <div class="flex flex-col items-center gap-6 mt-4">
+                    <div class="flex items-center gap-4">
+                        <button onclick="switchLanguage('hr')"
+                            class="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 backdrop-blur-xl border border-black/10 dark:border-white/10 text-xs font-bold shadow-lg text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10">HR</button>
+                        <button onclick="switchLanguage('en')"
+                            class="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 backdrop-blur-xl border border-black/10 dark:border-white/10 text-xs font-bold shadow-lg text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10">EN</button>
+                        <button onclick="switchLanguage('de')"
+                            class="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 backdrop-blur-xl border border-black/10 dark:border-white/10 text-xs font-bold shadow-lg text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10">DE</button>
+                    </div>
+
+                    <!-- Mobile Theme Toggle -->
+                    <button id="mobile-theme-toggle"
+                        class="w-14 h-14 rounded-full bg-white dark:bg-gray-800 shadow-lg transition-all hover:scale-105 flex items-center justify-center">
+                        <!-- Sun Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 hidden dark:block text-aroma-gold">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 block dark:hidden text-aroma-gold">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: CTA Button & Theme Toggle -->
+            <div class="hidden xl:flex items-center gap-2">
+                <!-- Language Switcher -->
+                <div
+                    class="hidden xl:flex items-center gap-2 px-4 py-2 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-xl shadow-lg transition-all hover:bg-black/10 dark:hover:bg-white/10 hover:border-black/20 dark:hover:border-white/20 hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-white/5">
+                    <button onclick="switchLanguage('hr')"
+                        class="text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">HR</button>
+                    <button onclick="switchLanguage('en')"
+                        class="text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">EN</button>
+                    <button onclick="switchLanguage('de')"
+                        class="text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">DE</button>
+                </div>
+
+                <button id="theme-toggle"
+                    class="px-4 py-2 rounded-full bg-white dark:bg-gray-800 shadow-lg transition-all hover:scale-105 flex items-center justify-center">
+                    <!-- Sun Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5 hidden dark:block text-aroma-gold">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5 block dark:hidden text-aroma-gold">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 max-w-[1920px] mx-auto px-8 py-12 pt-32">
+
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <span class="text-aroma-gold tracking-[0.4em] uppercase text-xs md:text-sm font-bold mb-4 block"
+                data-i18n="hero_subtitle_label">Tradition since 1923</span>
+            <h2 class="font-serif text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white"
+                data-i18n="hero_title">Naš Jelovnik</h2>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8" data-i18n="hero_subtitle">
+                Autentični okusi pripremljeni s ljubavlju i tradicijom</p>
+            
+            <!-- Category Icons (Mobile) -->
+            <div class="md:hidden flex items-center gap-4 overflow-x-auto no-scrollbar pl-2 pr-4 py-4 justify-start max-w-full">
+                <a href="#topli-napici" class="category-link flex flex-col items-center gap-2 min-w-[70px] group" data-category="topli-napici">
+                    <div class="w-14 h-14 rounded-full bg-aroma-gold/10 dark:bg-aroma-gold/20 flex items-center justify-center border-2 border-aroma-gold/30 transition-all group-hover:bg-aroma-gold/20 group-hover:scale-110">
+                        <img src="images/menu-webp/ikone/kava2.webp" alt="Topli Napici" class="w-10 h-10 object-contain" width="40" height="40">
+                    </div>
+                    <span class="text-xs font-medium text-gray-700 dark:text-gray-300 text-center" data-i18n="nav_hot_drinks">Kave</span>
+                </a>
+                <a href="#bezalkoholna-pica" class="category-link flex flex-col items-center gap-2 min-w-[70px] group" data-category="bezalkoholna-pica">
+                    <div class="w-14 h-14 rounded-full bg-aroma-gold/10 dark:bg-aroma-gold/20 flex items-center justify-center border-2 border-aroma-gold/30 transition-all group-hover:bg-aroma-gold/20 group-hover:scale-110">
+                        <img src="images/menu-webp/ikone/bezalkoholna.webp" alt="Bezalkoholna pića" class="w-10 h-10 object-contain" width="40" height="40">
+                    </div>
+                    <span class="text-xs font-medium text-gray-700 dark:text-gray-300 text-center" data-i18n="nav_soft_drinks">Pića</span>
+                </a>
+                <a href="#smoothie" class="category-link flex flex-col items-center gap-2 min-w-[70px] group" data-category="smoothie">
+                    <div class="w-14 h-14 rounded-full bg-aroma-gold/10 dark:bg-aroma-gold/20 flex items-center justify-center border-2 border-aroma-gold/30 transition-all group-hover:bg-aroma-gold/20 group-hover:scale-110">
+                        <img src="images/menu-webp/ikone/smoothi.webp" alt="Smoothie" class="w-10 h-10 object-contain" width="40" height="40">
+                    </div>
+                    <span class="text-xs font-medium text-gray-700 dark:text-gray-300 text-center" data-i18n="nav_smoothie">Smoothie</span>
+                </a>
+                <a href="#kolaci" class="category-link flex flex-col items-center gap-2 min-w-[70px] group" data-category="kolaci">
+                    <div class="w-14 h-14 rounded-full bg-aroma-gold/10 dark:bg-aroma-gold/20 flex items-center justify-center border-2 border-aroma-gold/30 transition-all group-hover:bg-aroma-gold/20 group-hover:scale-110">
+                        <img src="images/menu-webp/ikone/kolaci.webp" alt="Kolači" class="w-10 h-10 object-contain" width="40" height="40">
+                    </div>
+                    <span class="text-xs font-medium text-gray-700 dark:text-gray-300 text-center" data-i18n="nav_pastries">Kolači</span>
+                </a>
+                <a href="#palacinke" class="category-link flex flex-col items-center gap-2 min-w-[70px] group" data-category="palacinke">
+                    <div class="w-14 h-14 rounded-full bg-aroma-gold/10 dark:bg-aroma-gold/20 flex items-center justify-center border-2 border-aroma-gold/30 transition-all group-hover:bg-aroma-gold/20 group-hover:scale-110">
+                        <img src="images/menu-webp/ikone/palacinka.webp" alt="Palačinke" class="w-10 h-10 object-contain" width="40" height="40">
+                    </div>
+                    <span class="text-xs font-medium text-gray-700 dark:text-gray-300 text-center" data-i18n="nav_pancakes">Palačinke</span>
+                </a>
+                <a href="#sladoled" class="category-link flex flex-col items-center gap-2 min-w-[70px] group" data-category="sladoled">
+                    <div class="w-14 h-14 rounded-full bg-aroma-gold/10 dark:bg-aroma-gold/20 flex items-center justify-center border-2 border-aroma-gold/30 transition-all group-hover:bg-aroma-gold/20 group-hover:scale-110">
+                        <img src="images/menu-webp/ikone/sladoled.webp" alt="Sladoled" class="w-10 h-10 object-contain" width="40" height="40">
+                    </div>
+                    <span class="text-xs font-medium text-gray-700 dark:text-gray-300 text-center" data-i18n="nav_icecream">Sladoled</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Topli Napici Category -->
+        <section id="topli-napici" class="category-section mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+                    data-i18n="category_hot_drinks">Topli Napici</h3>
+                <div class="h-px flex-grow bg-gradient-to-r from-aroma-gold to-transparent"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile-stack-grid" id="topli-napici-items">
+                <!-- Items will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Bezalkoholna pića Category -->
+        <section id="bezalkoholna-pica" class="category-section mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+                    data-i18n="category_soft_drinks">Bezalkoholna pića</h3>
+                <div class="h-px flex-grow bg-gradient-to-r from-aroma-gold to-transparent"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile-stack-grid"
+                id="bezalkoholna-pica-items">
+                <!-- Items will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Smoothie Category -->
+        <section id="smoothie" class="category-section mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+                    data-i18n="category_smoothie">Smoothie</h3>
+                <div class="h-px flex-grow bg-gradient-to-r from-aroma-gold to-transparent"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile-stack-grid" id="smoothie-items">
+                <!-- Items will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Kolači Category -->
+        <section id="kolaci" class="category-section mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+                    data-i18n="category_pastries">Kolači</h3>
+                <div class="h-px flex-grow bg-gradient-to-r from-aroma-gold to-transparent"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile-stack-grid" id="kolaci-items">
+                <!-- Items will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Palačinke Category -->
+        <section id="palacinke" class="category-section mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+                    data-i18n="category_pancakes">Palačinke</h3>
+                <div class="h-px flex-grow bg-gradient-to-r from-aroma-gold to-transparent"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile-stack-grid" id="palacinke-items">
+                <!-- Items will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Sladoled Category -->
+        <section id="sladoled" class="category-section mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+                    data-i18n="category_icecream">Sladoled</h3>
+                <div class="h-px flex-grow bg-gradient-to-r from-aroma-gold to-transparent"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile-stack-grid" id="sladoled-items">
+                <!-- Items will be dynamically inserted here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="relative z-10 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md mt-20 py-12 border-t border-black/5 dark:border-white/5">
+        <div class="max-w-[1920px] mx-auto px-8 pb-8 xl:pb-0">
+            <!-- Amblem - Responsive positioning -->
+            <div class="flex justify-center mb-6 xl:absolute xl:bottom-8 xl:left-8">
+                <img src="images/webp/amblem.webp" alt="Aroma Amblem"
+                    class="w-20 h-20 md:w-24 md:h-24 lg:w-24 lg:h-24 opacity-90 dark:opacity-70 hover:opacity-100 dark:hover:opacity-90 transition-opacity duration-300 drop-shadow-md" width="96" height="96" loading="lazy">
+            </div>
+
+            <p class="text-gray-600 dark:text-gray-400 text-center mb-8" data-i18n="footer_text">&copy; 2025 Slastičarna
+                Aroma. Tradicija od 1923.</p>
+
+            <!-- Collapsible Info Cards -->
+            <div class="border-t border-aroma-gold/20 pt-6">
+                <div class="flex flex-col md:flex-row gap-4 max-w-4xl mx-auto">
+                    <!-- Napomena Card -->
+                    <div
+                        class="flex-1 border-2 border-aroma-gold/40 rounded-lg overflow-hidden bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm transition-all hover:border-aroma-gold/60">
+                        <button onclick="toggleFooterSection('napomena')"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between group">
+                            <strong
+                                class="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-aroma-gold transition-colors">Napomena</strong>
+                            <svg id="napomena-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor"
+                                class="w-5 h-5 text-aroma-gold transition-transform duration-300">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                        <div id="napomena-content"
+                            class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-4">
+                                <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                                    PDV i ostali porezi su uračunati u cijenu. Obavijest o načinu podnošenja pisanog
+                                    prigovora nalazi se na šanku.
+                                    <br class="my-2">
+                                    <span class="text-gray-400 dark:text-gray-500">VAT and taxes included.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Normativ Card -->
+                    <div
+                        class="flex-1 border-2 border-aroma-gold/40 rounded-lg overflow-hidden bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm transition-all hover:border-aroma-gold/60">
+                        <button onclick="toggleFooterSection('normativ')"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between group">
+                            <strong
+                                class="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-aroma-gold transition-colors">Normativ</strong>
+                            <svg id="normativ-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor"
+                                class="w-5 h-5 text-aroma-gold transition-transform duration-300">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                        <div id="normativ-content"
+                            class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-4">
+                                <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                                    Kava: 8g kava + 4g šećer; Topla čokolada: vrećica + 0,20l mlijeko; Nescafe: 17,5g +
+                                    0,20l mlijeko + 8g šećer; Cappuccino: 18,5g + 0,20l mlijeko + 8g šećer.
+                                    Kolač 1 komad; Palačinke 1 kom; Sladoled 1 kuglica.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="fixed bottom-8 right-6 md:right-8 flex flex-col gap-4 z-50">
+        <button id="back-to-top"
+            class="w-12 h-12 rounded-full bg-aroma-gold text-black shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 opacity-0 invisible translate-y-10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal"
+        class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md items-center justify-center p-4 md:p-8 cursor-pointer"
+        onclick="closeImageModal()">
+        <div class="absolute top-6 right-6 text-white hover:text-aroma-gold transition-colors z-[110] cursor-pointer"
+            onclick="closeImageModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-10 h-10 md:w-12 md:h-12">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <div id="modal-content" class="flex flex-col items-center justify-center relative cursor-default"
+            onclick="event.stopPropagation()">
+            <img id="modal-image" src="" alt="" class="max-w-[90vw] max-h-[85vh] w-auto h-auto object-contain">
+            <h3 id="modal-title"
+                class="font-serif text-2xl md:text-5xl font-bold text-white text-center drop-shadow-lg mt-4 z-[110]">
+            </h3>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu Data - Multilingual
+        const menuData = {
+            hr: {
+                header_tagline: "Slastičarna od 1923.",
+                hero_title: "Cjenik",
+                hero_subtitle: "Autentični okusi pripremljeni s ljubavlju i tradicijom",
+                hero_subtitle_label: "Tradicija od 1923",
+                nav_hot_drinks: "Topli Napici",
+                nav_soft_drinks: "Bezalkoholna pića",
+                nav_smoothie: "Smoothie",
+                nav_pastries: "Kolači",
+                nav_pancakes: "Palačinke",
+                nav_icecream: "Sladoled",
+                category_hot_drinks: "Topli Napici",
+                category_soft_drinks: "Bezalkoholna pića",
+                category_smoothie: "Smoothie",
+                category_pastries: "Kolači",
+                category_pancakes: "Palačinke",
+                category_icecream: "Sladoled",
+                footer_text: "© 2025 Slastičarna Aroma. Tradicija od 1923.",
+
+                "topli-napici": [
+                    {
+                        name: "Kava",
+                        description: "coffee",
+                        price: "1,90 €",
+                        image: "images/menu-webp/topli-napici/kava.webp"
+                    },
+                    {
+                        name: "Kava s mlijekom",
+                        description: "coffee with milk",
+                        price: "2,00 €",
+                        image: "images/menu-webp/topli-napici/Kava-s-mlijekom.webp"
+                    },
+                    {
+                        name: "Kava sa šlagom",
+                        description: "coffee with cream",
+                        price: "2,00 €",
+                        image: "images/menu-webp/topli-napici/Kava-sa-šlagom.webp"
+                    },
+                    {
+                        name: "Kava bez kofeina",
+                        description: "decaff",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Decaf-Coffee.webp"
+                    },
+                    {
+                        name: "Cappuccino",
+                        description: "cappuccino",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Cappuccino.webp"
+                    },
+                    {
+                        name: "Cap. Iz aparata",
+                        description: "machine cappuccino",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Cappuccino-iz-aparata.webp"
+                    },
+                    {
+                        name: "Bijela kava",
+                        description: "white coffee",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Bijela-kava.webp"
+                    },
+                    {
+                        name: "Kakao",
+                        description: "cocoa",
+                        price: "2,80 €",
+                        image: "images/menu-webp/topli-napici/kakao1.webp"
+                    },
+                    {
+                        name: "Vruća čokolada",
+                        description: "hot chocolate",
+                        price: "3,50 €",
+                        image: "images/menu-webp/topli-napici/vruca-cokolada.webp"
+                    },
+                    {
+                        name: "Čaj s limunom i medom",
+                        description: "tea with lemon and honey",
+                        price: "2,00 €",
+                        image: "images/menu-webp/topli-napici/caj2.webp"
+                    },
+                    {
+                        name: "Med",
+                        description: "honey",
+                        price: "0,30 €",
+                        image: "images/menu-webp/topli-napici/Med.webp"
+                    },
+                    {
+                        name: "Ledena kava",
+                        description: "ice coffee",
+                        price: "3,30 €",
+                        image: "images/menu-webp/topli-napici/ledena-kava.webp"
+                    },
+                    {
+                        name: "Kava za van",
+                        description: "coffee to go",
+                        price: "2,00 €",
+                        image: "images/menu-webp/topli-napici/caffe-to-go.webp"
+                    },
+                    {
+                        name: "Kava sa sladoledom",
+                        description: "coffee with ice cream",
+                        price: "5,00 €",
+                        image: "images/menu-webp/topli-napici/Kava-sa-sladoledom.webp"
+                    },
+                    {
+                        name: "Nescafe",
+                        description: "nescafe",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Nescaffe1.webp"
+                    }
+                ],
+
+                "bezalkoholna-pica": [
+                    {
+                        name: "Coca-Cola / Coca-Cola Zero (razne vrste)",
+                        description: "0,25 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Coca-cola.webp"
+                    },
+                    {
+                        name: "Fanta",
+                        description: "0,25 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Fanta.webp"
+                    },
+                    {
+                        name: "Sprite",
+                        description: "0,25 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Sprite.webp"
+                    },
+                    {
+                        name: "Schweppes (razni okusi)",
+                        description: "0,25 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Schweppes1.webp"
+                    },
+                    {
+                        name: "Prirodni sokovi",
+                        description: "0,20 l",
+                        price: "3,40 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Prirodni-sok.webp"
+                    },
+                    {
+                        name: "Ledeni caj",
+                        description: "0,25 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Ledeni-caj.webp"
+                    },
+                    {
+                        name: "Limunada",
+                        description: "0,20 l",
+                        price: "2,40 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada2.webp"
+                    },
+                    {
+                        name: "Limunada",
+                        description: "0,30 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada3.webp"
+                    },
+                    {
+                        name: "Limunada",
+                        description: "0,50 l",
+                        price: "3,40 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada5.webp"
+                    },
+                    {
+                        name: "Cedevita",
+                        description: "0,20 l",
+                        price: "2,80 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Cedevita.webp"
+                    },
+                    {
+                        name: "Cockta",
+                        description: "0,275 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/cocta.webp"
+                    },
+                    {
+                        name: "Orangina",
+                        description: "0,25 l",
+                        price: "3,40 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/orangina1.webp"
+                    },
+                    {
+                        name: "Römerquelle Emotion",
+                        description: "0,33 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-emotion.webp"
+                    },
+                    {
+                        name: "Römerquelle Mineralna",
+                        description: "0,33 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-mineralna.webp"
+                    },
+                    {
+                        name: "Prirodna voda",
+                        description: "0,33 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Prirodna-voda.webp"
+                    },
+                    {
+                        name: "Jana s okusom",
+                        description: "0,33 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Jana.webp"
+                    }
+                ],
+
+                smoothie: [
+                    {
+                        name: "Ljetni smoothie",
+                        description: "Refreshing summer drink",
+                        price: "3,90 €",
+                        image: "images/menu-webp/Smoothie/Ljetni.webp"
+                    },
+                    {
+                        name: "Ostanifit",
+                        description: "Stay fit smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/ostani-fit.webp"
+                    },
+                    {
+                        name: "Antistres",
+                        description: "Anti-stress smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/Antistres.webp"
+                    },
+                    {
+                        name: "Zdravanavika",
+                        description: "Healthy habit smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/Zdrava-navika.webp"
+                    },
+                    {
+                        name: "Sportskiosjećaj",
+                        description: "Sports feeling smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/Sportski-osjecaj.webp"
+                    },
+                    {
+                        name: "Bez doktora",
+                        description: "No doctor smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/Bez-doktora.webp"
+                    },
+                    {
+                        name: "Juicy orange",
+                        description: "Orange juice",
+                        price: "3,40 €",
+                        image: "images/menu-webp/Smoothie/Juicy-Orange.webp"
+                    }
+                ],
+
+                kolaci: [
+                    {
+                        name: "Ferrero torta",
+                        description: "Bogati okus lješnjaka, čokolade i hrskavih vafla.",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/ferrero2.webp"
+                    },
+                    {
+                        name: "Šumska čarolija",
+                        description: "Lagana i osvježavajuća torta sa šumskim voćem.",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/sumska.webp"
+                    },
+                    {
+                        name: "Jaffa torta",
+                        description: "Savršen spoj osvježavajuće naranče i meke čokolade.",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/jaffa2.webp"
+                    },
+                    {
+                        name: "Krempita",
+                        description: "Klasična slastica s bogatom vanilija kremom i hrskavim korama.",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Kolači/krempita.webp"
+                    },
+                    {
+                        name: "Nutella kocka",
+                        description: "Omiljeni namaz u obliku meke i ukusne kocke.",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Kolači/nutella-kocka.webp"
+                    },
+                    {
+                        name: "Medovik",
+                        description: "Tradicionalna torta s medenim korama i laganom kremom.",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Kolači/medovik.webp"
+                    },
+                    {
+                        name: "Pistachio cheesecake",
+                        description: "Kremasti sirni desert obogaćen pastom od pistacija.",
+                        price: "4,90 €",
+                        image: "images/menu-webp/Kolači/pistacio-cheesecake.webp"
+                    },
+                    {
+                        name: "Dubai torta",
+                        description: "Egzotična i raskošna torta koja spaja najbolje okuse.",
+                        price: "4,90 €",
+                        image: "images/menu-webp/Kolači/dubai.webp"
+                    },
+                    {
+                        name: "Maxi King",
+                        description: "Savršeni spoj karamele, čokolade, lješnjaka i kremastog punjenja.",
+                        price: "4,90 €",
+                        image: "images/menu-webp/Kolači/maxi-king.webp"
+                    },
+                    {
+                        name: "Tiramisu",
+                        description: "Talijanski klasik s mascarpone kremom i piškotama",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/tiramisu.webp"
+                    },
+                    {
+                        name: "Kesten pire",
+                        description: "Kesten pire sa šlagom",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/kesten-pire.webp"
+                    },
+                    {
+                        name: "Baklava",
+                        description: "Tradicionalna baklava s orasima",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/baklava1.webp"
+                    },
+                    {
+                        name: "Bueno",
+                        description: "Kremasti bueno kolač",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/bueno.webp"
+                    },
+                    {
+                        name: "Ledeni vjetar",
+                        description: "Bogat voćni kolač",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/ledeni-vjetar.webp"
+                    },
+                    {
+                        name: "Trileće",
+                        description: "Kolač s mliječnim preljevom",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/trilece.webp"
+                    },
+                    {
+                        name: "Šampita",
+                        description: "Pjenasta slatka poslastica",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/torta2.webp"
+                    }
+                ],
+
+                palacinke: [
+                    {
+                        name: "Dubai",
+                        description: "Krema od pistacije, kadaif, čokolada",
+                        price: "9,00 €",
+                        image: "images/menu-webp/palacinke/dubai.webp"
+                    },
+                    {
+                        name: "Nutella",
+                        description: "Orginalni lješnjak namaz",
+                        price: "4,50 €",
+                        image: "images/menu-webp/palacinke/nutella.webp"
+                    },
+                    {
+                        name: "Linolada",
+                        description: "Mliječni namaz s lješnjacima",
+                        price: "4,50 €",
+                        image: "images/menu-webp/palacinke/linolada.webp"
+                    },
+                    {
+                        name: "Prazna",
+                        description: "Domaće tijesto",
+                        price: "4,00 €",
+                        image: "images/menu-webp/palacinke/prazna.webp"
+                    },
+                    {
+                        name: "Kinder Bueno",
+                        description: "Kinder bueno krema i komadići",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/bueno.webp"
+                    },
+                    {
+                        name: "M&M's",
+                        description: "Čokoladni bomboni",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/m&m.webp"
+                    },
+                    {
+                        name: "Raffaello",
+                        description: "Krema od kokosa i badema",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/rafaelo.webp"
+                    },
+                    {
+                        name: "Oreo",
+                        description: "Kremasti keks namaz",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/oreo.webp"
+                    },
+                    {
+                        name: "Milka",
+                        description: "Nježna mliječna čokolada",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/milka.webp"
+                    },
+                    {
+                        name: "Kinder Maxi King",
+                        description: "Karamela i lješnjak",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/maxi-king.webp"
+                    },
+                    {
+                        name: "Šumsko Voće",
+                        description: "Osvježavajući voćni preljev",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/sumsko-voce.webp"
+                    },
+                    {
+                        name: "Toffifee",
+                        description: "Lješnjak u karameli",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/toffife.webp"
+                    },
+                    {
+                        name: "Snickers",
+                        description: "Kikiriki i karamela",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/snickers.webp"
+                    },
+                    {
+                        name: "Jaffa",
+                        description: "Naranča i čokolada",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/jaffa.webp"
+                    },
+                    {
+                        name: "Ferrero",
+                        description: "Hruskavi lješnjak namaz",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/fererro.webp"
+                    },
+                    {
+                        name: "Bananko",
+                        description: "Čokoladna bananica",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/bananko.webp"
+                    }
+                ],
+
+                sladoled: [
+                    {
+                        name: "Svi okusi",
+                        description: "All flavors - kugla/scoop",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/svi.webp"
+                    },
+                     {
+                        name: "Vanilija",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/Vanilija1.webp"
+                    },
+                    {
+                        name: "Čokolada",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/cokolada.webp"
+                    },
+                    {
+                        name: "Rum Punch",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/rum-punch.webp"
+                    },
+                    {
+                        name: "KinderBueno",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/bueno.webp"
+                    },
+                    {
+                        name: "Nutella",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/nutella.webp"
+                    },
+                    {
+                        name: "Red Bull",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/red-bull.webp"
+                    },
+                    {
+                        name: "Zelena Jabuka",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/zelena-jabuka.webp"
+                    },
+                    {
+                        name: "Lješnjak",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/ljesnjak.webp"
+                    },
+                    {
+                        name: "Kokos",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/kokos.webp"
+                    },
+                    {
+                        name: "Menta",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/Menta1.webp"
+                    },
+                    {
+                        name: "Jagoda",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/jagoda1.webp"
+                    },
+                    {
+                        name: "Karamela",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/karamela1.webp"
+                    },
+                    {
+                        name: "Pistacija",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/pistacio.webp"
+                    },
+                    {
+                        name: "Mango",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/mango.webp"
+                    },{
+                        name: "Ferrero",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/ferrero.webp"
+                    },
+                    {
+                        name: "Cookies",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/keksolino.webp"
+                    },
+                    {
+                        name: "Jogurt",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/jogurt.webp"
+                    },{
+                        name: "Amarena",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/rum-punch.webp"
+                    },
+                    {
+                        name: "Banana",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/banana.webp"
+                    },
+                    {
+                        name: "šumsko voće",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/sumsko-voce.webp"
+                    },{
+                        name: "Keksolino",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/keksolino.webp"
+                    },{
+                        name: "Štrumpf",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/strumf.webp"
+                    },
+                    {
+                        name: "Dubai Čokolada",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/dubai.webp"
+                    },
+                    {
+                        name: "Oreo",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/oreo.webp"
+                    },{
+                        name: "Limun",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/limun.webp"
+                    },{
+                        name: "Specijalitet Kuće",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/dubai.webp"
+                    },
+                    {
+                        name: "Jagoda",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/jagoda1.webp"
+                    },{
+                        name: "Jaffa",
+                        description: "since 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/jaffa.webp"
+                    },
+                    {
+                        name: "Mini posuda (4 kuglice)",
+                        description: "",
+                        price: "8,00 €",
+                        image: "images/menu-webp/Sladoled/mini.webp"
+                    },
+                    {
+                        name: "Mala posuda (5+1 gratis)",
+                        description: "",
+                        price: "10,00 €",
+                        image: "images/menu-webp/Sladoled/mala.webp"
+                    },
+                    {
+                        name: "Srednja posuda (7+1 gratis)",
+                        description: "",
+                        price: "14,00 €",
+                        image: "images/menu-webp/Sladoled/srednja.webp"
+                    },
+                    {
+                        name: "Velika posuda (10+2 gratis)",
+                        description: "",
+                        price: "20,00 €",
+                        image: "images/menu-webp/Sladoled/velika.webp"
+                    },
+                    {
+                        name: "SLATKI KORNET",
+                        description: "",
+                        price: "0,50 €",
+                        image: "images/menu-webp/Sladoled/waffel.webp"
+                    },
+                    {
+                        name: "Dječji sladoled",
+                        description: "",
+                        price: "1,50 €",
+                        image: "images/menu-webp/Sladoled/djeci.webp"
+                    }
+                   
+                ]
+            },
+
+            en: {
+                header_tagline: "Pastry Shop since 1923",
+                hero_title: "Price List",
+                hero_subtitle: "Authentic flavors prepared with love and tradition",
+                hero_subtitle_label: "Tradition since 1923",
+                nav_hot_drinks: "Hot Drinks",
+                nav_soft_drinks: "Soft Drinks",
+                nav_smoothie: "Smoothie",
+                nav_pastries: "Pastries",
+                nav_pancakes: "Pancakes",
+                nav_icecream: "Ice Cream",
+                category_hot_drinks: "Hot Drinks",
+                category_soft_drinks: "Soft Drinks",
+                category_smoothie: "Smoothie",
+                category_pastries: "Pastries",
+                category_pancakes: "Pancakes",
+                category_icecream: "Ice Cream",
+                footer_text: "© 2025 Aroma Pastry Shop. Tradition since 1923.",
+
+                "topli-napici": [
+                    {
+                        name: "Coffee",
+                        description: "coffee",
+                        price: "€1.90",
+                        image: "images/menu-webp/topli-napici/kava.webp"
+                    },
+                    {
+                        name: "Coffee with Milk",
+                        description: "coffee with milk",
+                        price: "€2.00",
+                        image: "images/menu-webp/topli-napici/Kava-s-mlijekom.webp"
+                    },
+                    {
+                        name: "Coffee with Cream",
+                        description: "coffee with cream",
+                        price: "€2.00",
+                        image: "images/menu-webp/topli-napici/Kava-sa-šlagom.webp"
+                    },
+                    {
+                        name: "Decaf Coffee",
+                        description: "decaff",
+                        price: "€2.50",
+                        image: "images/menu-webp/topli-napici/Decaf-Coffee.webp"
+                    },
+                    {
+                        name: "Cappuccino",
+                        description: "cappuccino",
+                        price: "€2.50",
+                        image: "images/menu-webp/topli-napici/Cappuccino.webp"
+                    },
+                    {
+                        name: "Machine Cappuccino",
+                        description: "machine cappuccino",
+                        price: "€2.50",
+                        image: "images/menu-webp/topli-napici/Cappuccino-iz-aparata.webp"
+                    },
+                    {
+                        name: "White Coffee",
+                        description: "white coffee",
+                        price: "€2.50",
+                        image: "images/menu-webp/topli-napici/Bijela-kava.webp"
+                    },
+                    {
+                        name: "Cocoa",
+                        description: "cocoa",
+                        price: "€2.80",
+                        image: "images/menu-webp/topli-napici/kakao1.webp"
+                    },
+                    {
+                        name: "Hot Chocolate",
+                        description: "hot chocolate",
+                        price: "€3.50",
+                        image: "images/menu-webp/topli-napici/vruca-cokolada.webp"
+                    },
+                    {
+                        name: "Tea with lemon and honey",
+                        description: "tea with lemon and honey",
+                        price: "€2.00",
+                        image: "images/menu-webp/topli-napici/caj2.webp"
+                    },
+                    {
+                        name: "Honey",
+                        description: "honey",
+                        price: "€0.30",
+                        image: "images/menu-webp/topli-napici/Med.webp"
+                    },
+                    {
+                        name: "Ice Coffee",
+                        description: "ice coffee",
+                        price: "€3.30",
+                        image: "images/menu-webp/topli-napici/ledena-kava.webp"
+                    },
+                    {
+                        name: "Coffee to go",
+                        description: "coffee to go",
+                        price: "€2.00",
+                        image: "images/menu-webp/topli-napici/caffe-to-go.webp"
+                    },
+                    {
+                        name: "Coffee with ice cream",
+                        description: "coffee with ice cream",
+                        price: "€5.00",
+                        image: "images/menu-webp/topli-napici/Kava-sa-sladoledom.webp"
+                    },
+                    {
+                        name: "Nescafe",
+                        description: "nescafe",
+                        price: "€2.50",
+                        image: "images/menu-webp/topli-napici/Nescaffe1.webp"
+                    }
+                ],
+
+                "bezalkoholna-pica": [
+                    {
+                        name: "Coca-Cola",
+                        description: "0.25 l",
+                        price: "€3.20",
+                        image: "images/menu-webp/Bezalkoholna-pica/Coca-cola.webp"
+                    },
+                    {
+                        name: "Fanta Orange",
+                        description: "0.25 l",
+                        price: "€3.20",
+                        image: "images/menu-webp/Bezalkoholna-pica/Fanta.webp"
+                    },
+                    {
+                        name: "Sprite",
+                        description: "0.25 l",
+                        price: "€3.20",
+                        image: "images/menu-webp/Bezalkoholna-pica/Sprite.webp"
+                    },
+                    {
+                        name: "Schweppes (various flavors)",
+                        description: "0.25 l",
+                        price: "€3.20",
+                        image: "images/menu-webp/Bezalkoholna-pica/Schweppes1.webp"
+                    },
+                    {
+                        name: "Nectar Juices",
+                        description: "0.20 l",
+                        price: "€3.40",
+                        image: "images/menu-webp/Bezalkoholna-pica/Prirodni-sok.webp"
+                    },
+                    {
+                        name: "Ice Tea",
+                        description: "0.25 l",
+                        price: "€3.00",
+                        image: "images/menu-webp/Bezalkoholna-pica/Ledeni-caj.webp"
+                    },
+                    {
+                        name: "Lemonade",
+                        description: "0.50 l",
+                        price: "€3.40",
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada5.webp"
+                    },
+                    {
+                        name: "Lemonade",
+                        description: "0.30 l",
+                        price: "€3.00",
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada3.webp"
+                    },{
+                        name: "Lemonade",
+                        description: "0.20 l",
+                        price: "€2.40",
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada2.webp"
+                    },
+                    {
+                        name: "Cedevita",
+                        description: "0.20 l",
+                        price: "€2.80",
+                        image: "images/menu-webp/Bezalkoholna-pica/Cedevita.webp"
+                    },
+                    {
+                        name: "Cockta",
+                        description: "0.275 l",
+                        price: "€3.20",
+                        image: "images/menu-webp/Bezalkoholna-pica/cocta.webp"
+                    },
+                    {
+                        name: "Orangina",
+                        description: "0.25 l",
+                        price: "€3.40",
+                        image: "images/menu-webp/Bezalkoholna-pica/orangina1.webp"
+                    },
+                    {
+                        name: "Römerquelle Emotion",
+                        description: "0.33 l",
+                        price: "€3.00",
+                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-emotion.webp"
+                    },
+                    {
+                        name: "Römerquelle Mineral",
+                        description: "0.33 l",
+                        price: "€3.00",
+                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-mineralna.webp"
+                    },
+                    {
+                        name: "Natural water",
+                        description: "0.33 l",
+                        price: "€3.00",
+                        image: "images/menu-webp/Bezalkoholna-pica/Prirodna-voda.webp"
+                    },
+                    {
+                        name: "Flavored Jana",
+                        description: "0.33 l",
+                        price: "€3.00",
+                        image: "images/menu-webp/Bezalkoholna-pica/Jana.webp"
+                    }
+                ],
+
+                smoothie: [
+                    {
+                        name: "Summer Smoothie",
+                        description: "Refreshing summer drink",
+                        price: "€3.90",
+                        image: "images/menu-webp/Smoothie/Ljetni.webp"
+                    },
+                    {
+                        name: "Stay Fit",
+                        description: "Stay fit smoothie",
+                        price: "€3.70",
+                        image: "images/menu-webp/Smoothie/ostani-fit.webp"
+                    },
+                    {
+                        name: "Anti-Stress",
+                        description: "Anti-stress smoothie",
+                        price: "€3.70",
+                        image: "images/menu-webp/Smoothie/Antistres.webp"
+                    },
+                    {
+                        name: "Healthy Habit",
+                        description: "Healthy habit smoothie",
+                        price: "€3.70",
+                        image: "images/menu-webp/Smoothie/Zdrava-navika.webp"
+                    },
+                    {
+                        name: "Sports Feeling",
+                        description: "Sports feeling smoothie",
+                        price: "€3.70",
+                        image: "images/menu-webp/Smoothie/Sportski-osjecaj.webp"
+                    },
+                    {
+                        name: "No Doctor",
+                        description: "No doctor smoothie",
+                        price: "€3.70",
+                        image: "images/menu-webp/Smoothie/Bez-doktora.webp"
+                    },
+                    {
+                        name: "Juicy Orange",
+                        description: "Orange juice",
+                        price: "€3.40",
+                        image: "images/menu-webp/Smoothie/Juicy-Orange.webp"
+                    }
+                ],
+
+                kolaci: [
+                    {
+                        name: "Ferrero Cake",
+                        description: "Rich taste of hazelnut, chocolate and crunchy wafers.",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/ferrero2.webp"
+                    },
+                    {
+                        name: "Forest Magic",
+                        description: "Light and refreshing tart with forest fruits.",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/sumska.webp"
+                    },
+                    {
+                        name: "Jaffa Cake",
+                        description: "Perfect blend of refreshing orange and soft chocolate.",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/jaffa2.webp"
+                    },
+                    {
+                        name: "Cream Cake",
+                        description: "Classic dessert with rich vanilla cream and crispy crust.",
+                        price: "€3.00",
+                        image: "images/menu-webp/Kolači/krempita.webp"
+                    },
+                    {
+                        name: "Nutella Cube",
+                        description: "Favorite spread in the shape of a soft and tasty cube.",
+                        price: "€3.00",
+                        image: "images/menu-webp/Kolači/nutella-kocka.webp"
+                    },
+                    {
+                        name: "Medovik",
+                        description: "Traditional cake with honey crusts and light cream.",
+                        price: "€3.00",
+                        image: "images/menu-webp/Kolači/medovik.webp"
+                    },
+                    {
+                        name: "Pistachio cheesecake",
+                        description: "Creamy cheese dessert enriched with pistachio paste.",
+                        price: "€4.90",
+                        image: "images/menu-webp/Kolači/pistacio-cheesecake.webp"
+                    },
+                    {
+                        name: "Dubai Cake",
+                        description: "Exotic and lavish cake combining the best flavors.",
+                        price: "€4.90",
+                        image: "images/menu-webp/Kolači/dubai.webp"
+                    },
+                    {
+                        name: "Maxi King",
+                        description: "Perfect combination of caramel, chocolate, hazelnut and creamy filling.",
+                        price: "€4.90",
+                        image: "images/menu-webp/Kolači/maxi-king.webp"
+                    },
+                    {
+                        name: "Tiramisu",
+                        description: "Italian classic with mascarpone cream and biscuits",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/tiramisu.webp"
+                    },
+                    {
+                        name: "Chestnut puree",
+                        description: "Chestnut puree with whipped cream",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/kesten-pire.webp"
+                    },
+                    {
+                        name: "Baklava",
+                        description: "Traditional baklava with walnuts",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/baklava1.webp"
+                    },
+                    {
+                        name: "Bueno",
+                        description: "Creamy Bueno cake",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/bueno.webp"
+                    },
+                    {
+                        name: "Ice wind (Ledeni vjetar)",
+                        description: "Rich fruit cake",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/ledeni-vjetar.webp"
+                    },
+                    {
+                        name: "Tres Leches (Trileće)",
+                        description: "Milk-soaked sponge cake",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/trilece.webp"
+                    },
+                    {
+                        name: "Šampita",
+                        description: "Fluffy meringue cake",
+                        price: "€3.50",
+                        image: "images/menu-webp/Kolači/torta2.webp"
+                    }
+                ],
+
+                palacinke: [
+                    {
+                        name: "Dubai",
+                        description: "Pistachio cream, kataifi, chocolate",
+                        price: "€9.00",
+                        image: "images/menu-webp/palacinke/dubai.webp"
+                    },
+                    {
+                        name: "Nutella",
+                        description: "Original hazelnut spread",
+                        price: "€4.50",
+                        image: "images/menu-webp/palacinke/nutella.webp"
+                    },
+                    {
+                        name: "Linolada",
+                        description: "Milk spread with hazelnuts",
+                        price: "€4.50",
+                        image: "images/menu-webp/palacinke/linolada.webp"
+                    },
+                    {
+                        name: "Empty",
+                        description: "Classic homemade dough",
+                        price: "€4.00",
+                        image: "images/menu-webp/palacinke/prazna.webp"
+                    },
+                    {
+                        name: "Kinder Bueno",
+                        description: "Kinder bueno cream and pieces",
+                        price: "€6.50",
+                        image: "images/menu-webp/palacinke/bueno.webp"
+                    },
+                    {
+                        name: "M&M's",
+                        description: "Chocolate candies",
+                        price: "€6.50",
+                        image: "images/menu-webp/palacinke/m&m.webp"
+                    },
+                    {
+                        name: "Raffaello",
+                        description: "Coconut and almond cream",
+                        price: "€6.50",
+                        image: "images/menu-webp/palacinke/rafaelo.webp"
+                    },
+                    {
+                        name: "Oreo",
+                        description: "Creamy cookie spread",
+                        price: "€6.50",
+                        image: "images/menu-webp/palacinke/oreo.webp"
+                    },
+                    {
+                        name: "Milka",
+                        description: "Gentle milk chocolate",
+                        price: "€6.50",
+                        image: "images/menu-webp/palacinke/milka.webp"
+                    },
+                    {
+                        name: "Kinder Maxi King",
+                        description: "Caramel and hazelnut",
+                        price: "€7.00",
+                        image: "images/menu-webp/palacinke/maxi-king.webp"
+                    },
+                    {
+                        name: "Forest Fruit",
+                        description: "Refreshing fruit topping",
+                        price: "€7.00",
+                        image: "images/menu-webp/palacinke/sumsko-voce.webp"
+                    },
+                    {
+                        name: "Toffifee",
+                        description: "Hazelnut in caramel",
+                        price: "€7.00",
+                        image: "images/menu-webp/palacinke/toffife.webp"
+                    },
+                    {
+                        name: "Snickers",
+                        description: "Peanut and caramel",
+                        price: "€7.00",
+                        image: "images/menu-webp/palacinke/snickers.webp"
+                    },
+                    {
+                        name: "Jaffa",
+                        description: "Orange and chocolate",
+                        price: "€7.00",
+                        image: "images/menu-webp/palacinke/jaffa.webp"
+                    },
+                    {
+                        name: "Ferrero",
+                        description: "Crunchy hazelnut spread",
+                        price: "€7.00",
+                        image: "images/menu-webp/palacinke/fererro.webp"
+                    },
+                    {
+                        name: "Bananko",
+                        description: "Chocolate banana candy",
+                        price: "€7.00",
+                        image: "images/menu-webp/palacinke/bananko.webp"
+                    }
+                ],
+
+                sladoled: [
+                    {
+                        name: "All Flavors",
+                        description: "All flavors - scoop",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/svi.webp"
+                    },
+                    {
+                        name: "Vanilla",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/Vanilija1.webp"
+                    },
+                    {
+                        name: "Chocolate",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/cokolada.webp"
+                    },
+                    {
+                        name: "Rum Punch",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/rum-punch.webp"
+                    },
+                    {
+                        name: "Kinder Bueno",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/bueno.webp"
+                    },
+                    {
+                        name: "Nutella",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/nutella.webp"
+                    },
+                    {
+                        name: "Red Bull",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/red-bull.webp"
+                    },
+                    {
+                        name: "Green Apple",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/zelena-jabuka.webp"
+                    },
+                    {
+                        name: "Hazelnut",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/ljesnjak.webp"
+                    },
+                    {
+                        name: "Coconut",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/kokos.webp"
+                    },
+                    {
+                        name: "Mint",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/Menta1.webp"
+                    },
+                    {
+                        name: "Strawberry",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/jagoda1.webp"
+                    },
+                    {
+                        name: "Caramel",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/karamela1.webp"
+                    },
+                    {
+                        name: "Pistachio",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/pistacio.webp"
+                    },
+                    {
+                        name: "Mango",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/mango.webp"
+                    },
+                    {
+                        name: "Ferrero",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/ferrero.webp"
+                    },
+                    {
+                        name: "Cookies",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/keksolino.webp"
+                    },
+                    {
+                        name: "Yogurt",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/jogurt.webp"
+                    },
+                    {
+                        name: "Amarena",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/rum-punch.webp"
+                    },
+                    {
+                        name: "Banana",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/banana.webp"
+                    },
+                    {
+                        name: "Forest Fruit",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/sumsko-voce.webp"
+                    },
+                    {
+                        name: "Keksolino",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/keksolino.webp"
+                    },
+                    {
+                        name: "Štrumpf",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/strumf.webp"
+                    },
+                    {
+                        name: "Dubai Chocolate",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/dubai.webp"
+                    },
+                    {
+                        name: "Oreo",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/oreo.webp"
+                    },
+                    {
+                        name: "Lemon",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/limun.webp"
+                    },
+                    {
+                        name: "House Specialty",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/dubai.webp"
+                    },
+                    {
+                        name: "Strawberry",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/jagoda1.webp"
+                    },
+                    {
+                        name: "Jaffa",
+                        description: "since 1923",
+                        price: "€2.00",
+                        image: "images/menu-webp/Sladoled/jaffa.webp"
+                    },
+                    {
+                        name: "Mini container (4 scoops)",
+                        description: "",
+                        price: "€8.00",
+                        image: "images/menu-webp/Sladoled/mini.webp"
+                    },
+                    {
+                        name: "Small container (5+1 free)",
+                        description: "",
+                        price: "€10.00",
+                        image: "images/menu-webp/Sladoled/mala.webp"
+                    },
+                    {
+                        name: "Medium container (7+1 free)",
+                        description: "",
+                        price: "€14.00",
+                        image: "images/menu-webp/Sladoled/srednja.webp"
+                    },
+                    {
+                        name: "Large container (10+2 free)",
+                        description: "",
+                        price: "€20.00",
+                        image: "images/menu-webp/Sladoled/velika.webp"
+                    },
+                    {
+                        name: "SWEET CONE",
+                        description: "",
+                        price: "€0.50",
+                        image: "images/menu-webp/Sladoled/waffel.webp"
+                    },
+                    {
+                        name: "Children's ice cream",
+                        description: "",
+                        price: "€1.50",
+                        image: "images/menu-webp/Sladoled/djeci.webp"
+                    }
+                ]
+            },
+
+            de: {
+                header_tagline: "Konditorei seit 1923",
+                hero_title: "Preisliste",
+                hero_subtitle: "Authentische Geschmäcker mit Liebe und Tradition zubereitet",
+                hero_subtitle_label: "Tradition seit 1923",
+                nav_hot_drinks: "Heißgetränke",
+                nav_soft_drinks: "Alkoholfreie Getränke",
+                nav_smoothie: "Smoothie",
+                nav_pastries: "Gebäck",
+                nav_pancakes: "Pfannkuchen",
+                nav_icecream: "Eis",
+                category_hot_drinks: "Heißgetränke",
+                category_soft_drinks: "Alkoholfreie Getränke",
+                category_smoothie: "Smoothie",
+                category_pastries: "Gebäck",
+                category_pancakes: "Pfannkuchen",
+                category_icecream: "Eis",
+                footer_text: "© 2025 Konditorei Aroma. Tradition seit 1923.",
+
+                "topli-napici": [
+                    {
+                        name: "Kaffee",
+                        description: "coffee",
+                        price: "1,90 €",
+                        image: "images/menu-webp/topli-napici/kava.webp"
+                    },
+                    {
+                        name: "Kaffee mit Milch",
+                        description: "coffee with milk",
+                        price: "2,00 €",
+                        image: "images/menu-webp/topli-napici/Kava-s-mlijekom.webp"
+                    },
+                    {
+                        name: "Kaffee mit Sahne",
+                        description: "coffee with cream",
+                        price: "2,00 €",
+                        image: "images/menu-webp/topli-napici/Kava-sa-šlagom.webp"
+                    },
+                    {
+                        name: "Koffeinfreier Kaffee",
+                        description: "decaff",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Decaf-Coffee.webp"
+                    },
+                    {
+                        name: "Cappuccino",
+                        description: "cappuccino",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Cappuccino.webp"
+                    },
+                    {
+                        name: "Cappuccino aus dem Automaten",
+                        description: "machine cappuccino",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Cappuccino-iz-aparata.webp"
+                    },
+                    {
+                        name: "Weißer Kaffee",
+                        description: "white coffee",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Bijela-kava.webp"
+                    },
+                    {
+                        name: "Kakao",
+                        description: "cocoa",
+                        price: "2,80 €",
+                        image: "images/menu-webp/topli-napici/kakao1.webp"
+                    },
+                    {
+                        name: "Heiße Schokolade",
+                        description: "hot chocolate",
+                        price: "3,50 €",
+                        image: "images/menu-webp/topli-napici/vruca-cokolada.webp"
+                    },
+                    {
+                        name: "Tee mit Zitrone und Honig",
+                        description: "tea with lemon and honey",
+                        price: "2,00 €",
+                        image: "images/menu-webp/topli-napici/caj2.webp"
+                    },
+                    {
+                        name: "Honig",
+                        description: "honey",
+                        price: "0,30 €",
+                        image: "images/menu-webp/topli-napici/Med.webp"
+                    },
+                    {
+                        name: "Eiskaffee",
+                        description: "ice coffee",
+                        price: "3,30 €",
+                        image: "images/menu-webp/topli-napici/ledena-kava.webp"
+                    },
+                    {
+                        name: "Kaffee zum Mitnehmen",
+                        description: "coffee to go",
+                        price: "2,00 €",
+                        image: "images/menu-webp/topli-napici/caffe-to-go.webp"
+                    },
+                    {
+                        name: "Kaffee mit Eis",
+                        description: "coffee with ice cream",
+                        price: "5,00 €",
+                        image: "images/menu-webp/topli-napici/Kava-sa-sladoledom.webp"
+                    },
+                    {
+                        name: "Nescafe",
+                        description: "nescafe",
+                        price: "2,50 €",
+                        image: "images/menu-webp/topli-napici/Nescaffe1.webp"
+                    }
+                ],
+
+                "bezalkoholna-pica": [
+                    {
+                        name: "Coca-Cola / Coca-Cola Zero (verschiedene Sorten)",
+                        description: "0,25 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Coca-cola.webp"
+                    },
+                    {
+                        name: "Fanta",
+                        description: "0,25 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Fanta.webp"
+                    },
+                    {
+                        name: "Sprite",
+                        description: "0,25 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Sprite.webp"
+                    },
+                    {
+                        name: "Schweppes (verschiedene Geschmacksrichtungen)",
+                        description: "0,25 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Schweppes1.webp"
+                    },
+                    {
+                        name: "Nektar Säfte",
+                        description: "0,20 l",
+                        price: "3,40 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Prirodni-sok.webp"
+                    },
+                    {
+                        name: "Eistee",
+                        description: "0,25 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Ledeni-caj.webp"
+                    },
+                    {
+                        name: "Limonade",
+                        description: "0,50 l",
+                        price: "3,40 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada5.webp"
+                    },
+                    {
+                        name: "Limonade",
+                        description: "0,30 l",
+                        price: "3,00 € ",
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada3.webp"
+                    },{
+                        name: "Limonade",
+                        description: "0,20 l",
+                        price: "2,40 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada2.webp"
+                    },
+                    {
+                        name: "Cedevita",
+                        description: "0,20 l",
+                        price: "2,80 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Cedevita.webp"
+                    },
+                    {
+                        name: "Cockta",
+                        description: "0,275 l",
+                        price: "3,20 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/cocta.webp"
+                    },
+                    {
+                        name: "Orangina",
+                        description: "0,25 l",
+                        price: "3,40 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/orangina1.webp"
+                    },
+                    {
+                        name: "Römerquelle Emotion",
+                        description: "0,33 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-emotion.webp"
+                    },
+                    {
+                        name: "Römerquelle Mineralwasser",
+                        description: "0,33 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-mineralna.webp"
+                    },
+                    {
+                        name: "Natürliches Wasser",
+                        description: "0,33 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Prirodna-voda.webp"
+                    },
+                    {
+                        name: "Jana mit Geschmack",
+                        description: "0,33 l",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Bezalkoholna-pica/Jana.webp"
+                    }
+                ],
+
+                smoothie: [
+                    {
+                        name: "Sommer-Smoothie",
+                        description: "Refreshing summer drink",
+                        price: "3,90 €",
+                        image: "images/menu-webp/Smoothie/Ljetni.webp"
+                    },
+                    {
+                        name: "Bleib Fit",
+                        description: "Stay fit smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/ostani-fit.webp"
+                    },
+                    {
+                        name: "Anti-Stress",
+                        description: "Anti-stress smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/Antistres.webp"
+                    },
+                    {
+                        name: "Gesunde Gewohnheit",
+                        description: "Healthy habit smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/Zdrava-navika.webp"
+                    },
+                    {
+                        name: "Sportgefühl",
+                        description: "Sports feeling smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/Sportski-osjecaj.webp"
+                    },
+                    {
+                        name: "Kein Arzt",
+                        description: "No doctor smoothie",
+                        price: "3,70 €",
+                        image: "images/menu-webp/Smoothie/Bez-doktora.webp"
+                    },
+                    {
+                        name: "Juicy Orange",
+                        description: "Orange juice",
+                        price: "3,40 €",
+                        image: "images/menu-webp/Smoothie/Juicy-Orange.webp"
+                    }
+                ],
+
+                kolaci: [
+                    {
+                        name: "Ferrero Torte",
+                        description: "Reicher Geschmack von Haselnuss, Schokolade und knusprigen Waffeln.",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/ferrero2.webp"
+                    },
+                    {
+                        name: "Waldzauber",
+                        description: "Leichte und erfrischende Torte mit Waldfrüchten.",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/sumska.webp"
+                    },
+                    {
+                        name: "Jaffa Torte",
+                        description: "Perfekte Mischung aus erfrischender Orange und weicher Schokolade.",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/jaffa2.webp"
+                    },
+                    {
+                        name: "Cremeschnitte",
+                        description: "Klassisches Dessert mit reicher Vanillecreme und knuspriger Kruste.",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Kolači/krempita.webp"
+                    },
+                    {
+                        name: "Nutella Würfel",
+                        description: "Lieblingsaufstrich in Form eines weichen und leckeren Würfels.",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Kolači/nutella-kocka.webp"
+                    },
+                    {
+                        name: "Medovik",
+                        description: "Traditioneller Honigkuchen mit leichter Creme.",
+                        price: "3,00 €",
+                        image: "images/menu-webp/Kolači/medovik.webp"
+                    },
+                    {
+                        name: "Pistachio cheesecake",
+                        description: "Cremiges Käsedessert mit Pistazienpaste verfeinert.",
+                        price: "4,90 €",
+                        image: "images/menu-webp/Kolači/pistacio-cheesecake.webp"
+                    },
+                    {
+                        name: "Dubai Torte",
+                        description: "Exotische und üppige Torte mit den besten Aromen.",
+                        price: "4,90 €",
+                        image: "images/menu-webp/Kolači/dubai.webp"
+                    },
+                    {
+                        name: "Maxi King",
+                        description: "Perfekte Kombination aus Karamell, Schokolade, Haselnuss und cremiger Füllung.",
+                        price: "4,90 €",
+                        image: "images/menu-webp/Kolači/maxi-king.webp"
+                    },
+                    {
+                        name: "Tiramisu",
+                        description: "Italienischer Klassiker mit Mascarponecreme",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/tiramisu.webp"
+                    },
+                    {
+                        name: "Kastanienpüree",
+                        description: "Kastanienpüree mit Schlagsahne",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/kesten-pire.webp"
+                    },
+                    {
+                        name: "Baklava",
+                        description: "Traditionelles Baklava mit Walnüssen",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/baklava1.webp"
+                    },
+                    {
+                        name: "Bueno",
+                        description: "Cremiger Bueno-Kuchen",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/bueno.webp"
+                    },
+                    {
+                        name: "Eiswind (Ledeni vjetar)",
+                        description: "Reicher Obstkuchen",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/ledeni-vjetar.webp"
+                    },
+                    {
+                        name: "Tres Leches",
+                        description: "Milchkuchen mit Karamell",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/trilece.webp"
+                    },
+                    {
+                        name: "Šampita",
+                        description: "Luftiger Baiser-Kuchen",
+                        price: "3,50 €",
+                        image: "images/menu-webp/Kolači/torta2.webp"
+                    }
+                ],
+
+                palacinke: [
+                    {
+                        name: "Dubai",
+                        description: "Pistaziencreme, Kadaif, Schokolade",
+                        price: "9,00 €",
+                        image: "images/menu-webp/palacinke/dubai.webp"
+                    },
+                    {
+                        name: "Nutella",
+                        description: "Originaler Haselnussaufstrich",
+                        price: "4,50 €",
+                        image: "images/menu-webp/palacinke/nutella.webp"
+                    },
+                    {
+                        name: "Linolada",
+                        description: "Milchaufstrich mit Haselnüssen",
+                        price: "4,50 €",
+                        image: "images/menu-webp/palacinke/linolada.webp"
+                    },
+                    {
+                        name: "Leer",
+                        description: "Klassischer hausgemachter Teig",
+                        price: "4,00 €",
+                        image: "images/menu-webp/palacinke/prazna.webp"
+                    },
+                    {
+                        name: "Kinder Bueno",
+                        description: "Kinder Bueno Creme und Stücke",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/bueno.webp"
+                    },
+                    {
+                        name: "M&M's",
+                        description: "Schokoladenbonbons",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/m&m.webp"
+                    },
+                    {
+                        name: "Raffaello",
+                        description: "Kokos- und Mandelcreme",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/rafaelo.webp"
+                    },
+                    {
+                        name: "Oreo",
+                        description: "Cremiger Keksaufstrich",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/oreo.webp"
+                    },
+                    {
+                        name: "Milka",
+                        description: "Zarte Milchschokolade",
+                        price: "6,50 €",
+                        image: "images/menu-webp/palacinke/milka.webp"
+                    },
+                    {
+                        name: "Kinder Maxi King",
+                        description: "Karamell und Haselnuss",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/maxi-king.webp"
+                    },
+                    {
+                        name: "Waldbeeren",
+                        description: "Erfrischender Fruchtbelag",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/sumsko-voce.webp"
+                    },
+                    {
+                        name: "Toffifee",
+                        description: "Haselnuss in Karamell",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/toffife.webp"
+                    },
+                    {
+                        name: "Snickers",
+                        description: "Erdnuss und Karamell",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/snickers.webp"
+                    },
+                    {
+                        name: "Jaffa",
+                        description: "Orange und Schokolade",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/jaffa.webp"
+                    },
+                    {
+                        name: "Ferrero",
+                        description: "Knuspriger Haselnussaufstrich",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/fererro.webp"
+                    },
+                    {
+                        name: "Bananko",
+                        description: "Schoko-Bananen-Süßigkeit",
+                        price: "7,00 €",
+                        image: "images/menu-webp/palacinke/bananko.webp"
+                    }
+                ],
+
+                sladoled: [
+                    {
+                        name: "Alle Geschmacksrichtungen",
+                        description: "Alle Geschmacksrichtungen - Kugel",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/svi.webp"
+                    },
+                    {
+                        name: "Vanille",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/Vanilija1.webp"
+                    },
+                    {
+                        name: "Schokolade",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/cokolada.webp"
+                    },
+                    {
+                        name: "Rum Punch",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/rum-punch.webp"
+                    },
+                    {
+                        name: "Kinder Bueno",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/bueno.webp"
+                    },
+                    {
+                        name: "Nutella",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/nutella.webp"
+                    },
+                    {
+                        name: "Red Bull",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/red-bull.webp"
+                    },
+                    {
+                        name: "Grüner Apfel",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/zelena-jabuka.webp"
+                    },
+                    {
+                        name: "Haselnuss",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/ljesnjak.webp"
+                    },
+                    {
+                        name: "Kokos",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/kokos.webp"
+                    },
+                    {
+                        name: "Minze",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/Menta1.webp"
+                    },
+                    {
+                        name: "Erdbeere",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/jagoda1.webp"
+                    },
+                    {
+                        name: "Karamell",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/karamela1.webp"
+                    },
+                    {
+                        name: "Pistazie",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/pistacio.webp"
+                    },
+                    {
+                        name: "Mango",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/mango.webp"
+                    },
+                    {
+                        name: "Ferrero",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/ferrero.webp"
+                    },
+                    {
+                        name: "Kekse",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/keksolino.webp"
+                    },
+                    {
+                        name: "Joghurt",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/jogurt.webp"
+                    },
+                    {
+                        name: "Amarena",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/rum-punch.webp"
+                    },
+                    {
+                        name: "Banane",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/banana.webp"
+                    },
+                    {
+                        name: "Waldfrüchte",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/sumsko-voce.webp"
+                    },
+                    {
+                        name: "Keksolino",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/keksolino.webp"
+                    },
+                    {
+                        name: "Strumpf",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/strumf.webp"
+                    },
+                    {
+                        name: "Dubai Schokolade",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/dubai.webp"
+                    },
+                    {
+                        name: "Oreo",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/oreo.webp"
+                    },
+                    {
+                        name: "Zitrone",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/limun.webp"
+                    },
+                    {
+                        name: "Haus Spezialität",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/dubai.webp"
+                    },
+                    {
+                        name: "Erdbeere",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/jagoda1.webp"
+                    },
+                    {
+                        name: "Jaffa",
+                        description: "seit 1923",
+                        price: "2,00 €",
+                        image: "images/menu-webp/Sladoled/jaffa.webp"
+                    },
+                    {
+                        name: "Kleiner Behälter (5+1 gratis)",
+                        description: "",
+                        price: "10,00 €",
+                        image: "images/menu-webp/Sladoled/mala.webp"
+                    },
+                    {
+                        name: "Mittlerer Behälter (7+1 gratis)",
+                        description: "",
+                        price: "14,00 €",
+                        image: "images/menu-webp/Sladoled/srednja.webp"
+                    },
+                    {
+                        name: "Großer Behälter (10+2 gratis)",
+                        description: "",
+                        price: "20,00 €",
+                        image: "images/menu-webp/Sladoled/velika.webp"
+                    },
+                    {
+                        name: "SÜSSE WAFFEL",
+                        description: "",
+                        price: "0,50 €",
+                        image: "images/menu-webp/Sladoled/waffel.webp"
+                    },
+                    {
+                        name: "Kinder Eis",
+                        description: "",
+                        price: "1,50 €",
+                        image: "images/menu-webp/Sladoled/djeci.webp"
+                    }
+                ]
+            }
+        };
+
+        let currentLanguage = 'hr';
+
+        // Toggle Footer Section
+        function toggleFooterSection(section) {
+            const content = document.getElementById(`${section}-content`);
+            const icon = document.getElementById(`${section}-icon`);
+
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                // Close
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Open
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Switch Language
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+
+            // Update button styles in top right
+            const topRightButtons = document.querySelectorAll('.hidden.md\\:flex.items-center.gap-2.px-4 button[onclick^="switchLanguage"]');
+            topRightButtons.forEach(btn => {
+                const btnLang = btn.getAttribute('onclick').match(/'(\w+)'/)[1];
+                if (btnLang === lang) {
+                    btn.className = 'text-[13px] font-medium text-black dark:text-white transition-colors font-bold';
+                } else {
+                    btn.className = 'text-[13px] font-medium text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors';
+                }
+            });
+
+            // Update all text elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (menuData[lang][key]) {
+                    element.textContent = menuData[lang][key];
+                }
+            });
+
+            // Re-render menu items
+            renderMenuItems();
+            setTimeout(initMobileStackCards, 50);
+        }
+
+        // Render Menu Items
+        function renderMenuItems() {
+            const categories = ['topli-napici', 'bezalkoholna-pica', 'smoothie', 'kolaci', 'palacinke', 'sladoled'];
+
+            categories.forEach(category => {
+                const container = document.getElementById(`${category}-items`);
+                
+                if (!container) {
+                    console.error(`Container not found for category: ${category}`);
+                    return;
+                }
+
+                container.innerHTML = '';
+
+                const items = menuData[currentLanguage][category];
+                if (!items || !Array.isArray(items)) {
+                    console.error(`No items found for category: ${category} in language: ${currentLanguage}`);
+                    return;
+                }
+
+                // Special handling for sladoled category - show "Svi okusi" as clickable subcategory + specified extra items
+                if (category === 'sladoled') {
+                    const sviOkusiItem = items.find(item => item.name === 'Svi okusi' || item.name === 'All Flavors' || item.name === 'Alle Geschmacksrichtungen');
+                    const additionalNames = ['ZA PONJET', 'Jedna kuglica', 'Mini posuda (4 kuglice)', 'Mala posuda (5+1 gratis)', 'Srednja posuda (7+1 gratis)', 'Velika posuda (10+2 gratis)', 'SLATKI KORNET', 'Dječji sladoled', 'Bilješka', 'FOR TAKE AWAY', 'One scoop', 'Mini container (4 scoops)', 'Small container (5+1 free)', 'Medium container (7+1 free)', 'Large container (10+2 free)', 'SWEET CONE', 'Children\'s ice cream', 'Note', 'ZUM MITNEHMEN', 'Eine Kugel', 'Mini Behälter (4 Kugeln)', 'Kleiner Behälter (5+1 gratis)', 'Mittlerer Behälter (7+1 gratis)', 'Großer Behälter (10+2 gratis)', 'SÜSSE WAFFEL', 'Kinder Eis', 'Hinweis', 'Take away posuda', 'Kornet', 'Kornet za djecu', 'Take away container', 'Cone', 'Children\'s cone', 'Take away Behälter', 'Waffel', 'Kinderwaffel'];
+                    const extraItems = items.filter(item => additionalNames.includes(item.name));
+
+                    if (sviOkusiItem) {
+                        const itemCard = `
+                            <div class="stack-card-wrapper h-full">
+                            <div class="menu-card bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl shadow-sm md:shadow-md p-4 md:p-6 hover:border-aroma-gold/70 transition-all duration-300 hover:shadow-lg h-full flex flex-col justify-between cursor-pointer" style="border: 3px solid rgba(197,160,89,1); box-shadow: 0 0 20px rgba(197,160,89,0.3);" onclick="showAllIceCreamFlavors()">
+                                <div class="flex gap-4 items-start h-full">
+                                    <div class="flex-1 flex flex-col justify-between h-full">
+                                        <div class="mb-4">
+                                            <h4 class="font-serif text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">${sviOkusiItem.name}</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${sviOkusiItem.description}</p>
+                                        </div>
+                                        <div class="flex justify-between items-center pt-3 border-t border-aroma-gold/20 mt-auto">
+                                            <span class="text-xl md:text-2xl font-semibold tracking-tight text-aroma-gold">${sviOkusiItem.price}</span>
+                                            <div class="flex items-center gap-1 px-3 py-1.5 bg-aroma-gold/10 rounded-full border border-aroma-gold/30 hover:bg-aroma-gold/20 transition-all duration-200 cursor-pointer group">
+                                                <span class="text-sm font-bold text-aroma-gold group-hover:text-aroma-gold/90">${currentLanguage === 'hr' ? 'Kliknite za sve okuse' : currentLanguage === 'en' ? 'Click for all flavors' : 'Klicken für alle Sorten'}</span>
+                                                <svg class="w-4 h-4 text-aroma-gold group-hover:text-aroma-gold/90 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    ${sviOkusiItem.image ? `<div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden" style="border: 2px solid rgba(197,160,89,0.65); box-shadow: 0 0 0 1px rgba(197,160,89,0.15);" onclick="event.stopPropagation(); openImageModal('${sviOkusiItem.image}', '${sviOkusiItem.name}')">
+                                        <img src="${sviOkusiItem.image}" alt="${sviOkusiItem.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                    </div>` : ''}
+                                </div>
+                            </div>
+                            </div>
+                        `;
+                        container.innerHTML = itemCard;
+                    }
+
+                    // prikaži samo dodatne stavke (ne sve okuse) u rubrici Sladoled
+                    if (extraItems.length > 0) {
+                        extraItems.forEach(item => {
+                            const itemCard = `
+                                <div class="stack-card-wrapper h-full mt-4">
+                                <div class="menu-card bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl shadow-sm md:shadow-md p-4 md:p-6 border border-aroma-gold/30 dark:border-gray-700 hover:border-aroma-gold/70 transition-all duration-300 hover:shadow-lg hover:shadow-aroma-gold/10 h-full flex flex-col justify-between">
+                                    <div class="flex gap-4 items-start h-full">
+                                        <div class="flex-1 flex flex-col justify-between h-full">
+                                            <div class="mb-4">
+                                                <h4 class="font-serif text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">${item.name}</h4>
+                                                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${item.description || ''}</p>
+                                            </div>
+                                            <div class="flex justify-between items-center pt-3 border-t border-aroma-gold/20 mt-auto">
+                                                <span class="text-xl md:text-2xl font-semibold tracking-tight text-aroma-gold">${item.price}</span>
+                                            </div>
+                                        </div>
+                                        ${item.image ? `<div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden cursor-zoom-in" style="border: 2px solid rgba(197,160,89,0.65); box-shadow: 0 0 0 1px rgba(197,160,89,0.15);" onclick="event.stopPropagation(); openImageModal('${item.image}', '${item.name}')">
+                                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                        </div>` : ''}
+                                    </div>
+                                </div>
+                                </div>
+                            `;
+                            container.innerHTML += itemCard;
+                        });
+                    }
+                } else {
+                    // Normal rendering for other categories
+                    items.forEach((item, index) => {
+                        const itemCard = `
+                            <div class="stack-card-wrapper h-full">
+                            <div class="menu-card bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl shadow-sm md:shadow-md p-4 md:p-6 border border-aroma-gold/30 dark:border-gray-700 hover:border-aroma-gold/70 transition-all duration-300 hover:shadow-lg hover:shadow-aroma-gold/10 h-full flex flex-col justify-between">
+                                <div class="flex gap-4 items-start h-full">
+                                    <div class="flex-1 flex flex-col justify-between h-full">
+                                        <div class="mb-4">
+                                            <h4 class="font-serif text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">${item.name}</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${item.description}</p>
+                                        </div>
+                                        <div class="flex justify-between items-center pt-3 border-t border-aroma-gold/20 mt-auto">
+                                            <span class="text-xl md:text-2xl font-semibold tracking-tight text-aroma-gold">${item.price}</span>
+                                        </div>
+                                    </div>
+                                    ${item.image ? `<div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden cursor-zoom-in" style="border: 2px solid rgba(197,160,89,0.65); box-shadow: 0 0 0 1px rgba(197,160,89,0.15);" onclick="openImageModal('${item.image}', '${item.name}')">
+                                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                    </div>` : ''}
+                                </div>
+                            </div>
+                            </div>
+                        `;
+                        container.innerHTML += itemCard;
+                    });
+                }
+            });
+        }
+
+        function showAllIceCreamFlavors() {
+            const container = document.getElementById('sladoled-items');
+            if (!container) return;
+
+            container.innerHTML = '';
+
+            const items = menuData[currentLanguage]['sladoled'];
+            if (!items || !Array.isArray(items)) return;
+
+            // prikaz samo okusa (izuzetak je stavka Svi okusi koja prikazuje listu okusa, ali ne prikazan i dalje)
+            const flavors = items.filter(item => item.name !== 'Svi okusi' && item.name !== 'All Flavors' && item.name !== 'Alle Geschmacksrichtungen' && (item.price === '2,00 €' || item.price === '€2.00'));
+            const additionalNames = ['ZA PONJET', 'Jedna kuglica', 'Mini posuda (4 kuglice)', 'Mala posuda (5+1 gratis)', 'Srednja posuda (7+1 gratis)', 'Velika posuda (10+2 gratis)', 'SLATKI KORNET', 'Dječji sladoled', 'Bilješka', 'FOR TAKE AWAY', 'One scoop', 'Mini container (4 scoops)', 'Small container (5+1 free)', 'Medium container (7+1 free)', 'Large container (10+2 free)', 'SWEET CONE', 'Children\'s ice cream', 'Note', 'ZUM MITNEHMEN', 'Eine Kugel', 'Mini Behälter (4 Kugeln)', 'Kleiner Behälter (5+1 gratis)', 'Mittlerer Behälter (7+1 gratis)', 'Großer Behälter (10+2 gratis)', 'SÜSSE WAFFEL', 'Kinder Eis', 'Hinweis', 'Take away posuda', 'Kornet', 'Kornet za djecu', 'Take away container', 'Cone', 'Children\'s cone', 'Take away Behälter', 'Waffel', 'Kinderwaffel'];
+            const additionalItems = items.filter(item => additionalNames.includes(item.name));
+
+            // Show ice cream flavors
+            if (flavors.length > 0) {
+                flavors.forEach((item, index) => {
+                    const itemCard = `
+                        <div class="stack-card-wrapper h-full">
+                        <div class="menu-card bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl shadow-sm md:shadow-md p-4 md:p-6 border border-aroma-gold/30 dark:border-gray-700 hover:border-aroma-gold/70 transition-all duration-300 hover:shadow-lg hover:shadow-aroma-gold/10 h-full flex flex-col justify-between">
+                            <div class="flex gap-4 items-start h-full">
+                                <div class="flex-1 flex flex-col justify-between h-full">
+                                    <div class="mb-4">
+                                        <h4 class="font-serif text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">${item.name}</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${item.description}</p>
+                                    </div>
+                                    <div class="flex justify-between items-center pt-3 border-t border-aroma-gold/20 mt-auto">
+                                        <span class="text-xl md:text-2xl font-semibold tracking-tight text-aroma-gold">${item.price}</span>
+                                    </div>
+                                </div>
+                                ${item.image ? `<div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden cursor-zoom-in" style="border: 2px solid rgba(197,160,89,0.65); box-shadow: 0 0 0 1px rgba(197,160,89,0.15);" onclick="openImageModal('${item.image}', '${item.name}')">
+                                    <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>` : ''}
+                            </div>
+                        </div>
+                        </div>
+                    `;
+                    container.innerHTML += itemCard;
+                });
+            }
+
+            // Add a back button
+            const backButtonText = currentLanguage === 'hr' ? '← Natrag na kategorije' : currentLanguage === 'en' ? '← Back to categories' : '← Zurück zu Kategorien';
+            const backButton = `
+                <div class="col-span-full flex justify-center mt-6">
+                    <button onclick="renderMenuItems()" class="px-6 py-3 bg-aroma-gold text-white rounded-full font-semibold hover:bg-aroma-gold/90 transition-colors">
+                        ${backButtonText}
+                    </button>
+                </div>
+            `;
+            container.innerHTML += backButton;
+
+            // Re-initialize animations
+            initMobileStackCards();
+        }
+
+        // Mobile Wow Scroll Animation
+        function initMobileStackCards() {
+            if (window.innerWidth >= 768) return;
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+            // Čišćenje starih ScrollTriggera da izbjegneš memory leak i konflikte
+            ScrollTrigger.getAll().forEach(t => t.kill());
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Reset all wrappers
+            document.querySelectorAll('.stack-card-wrapper').forEach(el => {
+                gsap.set(el, { clearProps: 'all' });
+            });
+
+            document.querySelectorAll('.mobile-stack-grid').forEach((grid, gridIndex) => {
+                const wrappers = Array.from(grid.querySelectorAll('.stack-card-wrapper'));
+
+                wrappers.forEach((wrapper, i) => {
+                    wrapper.style.zIndex = i + 1;
+
+                    // --- ENTRANCE ANIMATION: slide up + fade in ---
+                    gsap.set(wrapper, { opacity: 0, y: 50, transformPerspective: 800 });
+
+                    ScrollTrigger.create({
+                        id: `mstack-enter-${gridIndex}-${i}`,
+                        trigger: wrapper,
+                        start: 'top 95%',
+                        end: 'top 60%',
+                        scrub: 0.4,
+                        onUpdate: (self) => {
+                            const p = self.progress;
+                            gsap.set(wrapper, {
+                                opacity: Math.min(1, p * 1.5),
+                                y: 50 * (1 - p)
+                            });
+                        },
+                        onLeaveBack: () => {
+                            gsap.set(wrapper, { opacity: 0, y: 50 });
+                        }
+                    });
+
+                    // --- EXIT ANIMATION: previous card scales back subtly, no blur ---
+                    if (i > 0) {
+                        const prevWrapper = wrappers[i - 1];
+                        ScrollTrigger.create({
+                            id: `mstack-${gridIndex}-${i}`,
+                            trigger: wrapper,
+                            start: 'top 75%',
+                            end: 'top 35%',
+                            scrub: 0.5,
+                            onUpdate: (self) => {
+                                const p = self.progress;
+                                gsap.set(prevWrapper, {
+                                    scale: 1 - p * 0.05,
+                                    y: -p * 12,
+                                    opacity: 1 - p * 0.15,
+                                    transformPerspective: 800,
+                                    transformOrigin: 'center top'
+                                });
+                            },
+                            onLeaveBack: () => {
+                                gsap.set(prevWrapper, { scale: 1, y: 0, opacity: 1 });
+                            }
+                        });
+                    }
+                });
+            });
+        }
+
+        // Modal Functions
+        function openImageModal(src, name) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-image');
+            const modalTitle = document.getElementById('modal-title');
+
+            modalImg.src = src;
+            modalTitle.textContent = name;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('image-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeImageModal();
+        });
+
+        // Scroll to Category
+        function scrollToCategory(categoryId) {
+            const element = document.getElementById(categoryId);
+            if (!element) return;
+            const navHeight = document.querySelector('nav').offsetHeight;
+            const offset = navHeight + 16;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Intercept all anchor links pointing to sections
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                // Skip category links - they have their own handler
+                if (this.classList.contains('category-link')) {
+                    return;
+                }
+                
+                const targetId = this.getAttribute('href').slice(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    scrollToCategory(targetId);
+                }
+            });
+        });
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+        const mobileThemeToggleNavBtn = document.getElementById('mobile-theme-toggle-nav');
+        const htmlElement = document.documentElement;
+
+        // Check local storage or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Toggle function
+        function toggleTheme() {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+            } else {
+                localStorage.theme = 'light';
+            }
+        }
+
+        // Desktop theme toggle
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', toggleTheme);
+        }
+
+        // Mobile theme toggle (inside menu)
+        if (mobileThemeToggleBtn) {
+            mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+        }
+
+        // Mobile theme toggle (in navbar)
+        if (mobileThemeToggleNavBtn) {
+            mobileThemeToggleNavBtn.addEventListener('click', toggleTheme);
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        function toggleMenu() {
+            const isOpen = !mobileMenu.classList.contains('translate-x-full');
+
+            if (isOpen) {
+                // Zatvori menu
+                mobileMenu.classList.add('translate-x-full');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            } else {
+                // Otvori menu
+                mobileMenu.classList.remove('translate-x-full');
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Don't close menu if it's a category link - let the category filter handle it
+                if (!this.classList.contains('category-link')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Initialize all category sections to be visible on page load
+        document.querySelectorAll('.category-section').forEach(section => {
+            section.style.display = 'block';
+            section.classList.remove('fade-out');
+        });
+
+        // Popravljeni Category filter system
+        document.querySelectorAll('.category-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const category = this.getAttribute('data-category');
+                
+                // Zatvori mobile menu ako je otvoren
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
+                    toggleMenu();
+                }
+                
+                // 1. Ukloni active state sa svih linkova i dodaj na kliknuti
+                document.querySelectorAll('.category-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                const allCategorySections = document.querySelectorAll('.category-section');
+                
+                // 2. Sakrij sve sekcije odmah bez čekanja
+                allCategorySections.forEach(section => {
+                    section.style.display = 'none';
+                    section.classList.add('fade-out');
+                });
+                
+                // 3. Prikaži odabranu sekciju
+                const selectedSection = document.getElementById(category);
+                if (selectedSection) {
+                    selectedSection.style.display = 'block';
+                    // Kratki timeout da se osigura da je display:block sjeo prije animacije
+                    setTimeout(() => {
+                        selectedSection.classList.remove('fade-out');
+                        
+                        // CRITICAL FIX: Ponovno pokreni stack animacije za mobilne
+                        if (window.innerWidth < 768) {
+                            initMobileStackCards(); // Tvoja funkcija za inicijalizaciju GSAP-a
+                            ScrollTrigger.refresh(); // Prisili GSAP da ponovno izračuna pozicije
+                        }
+                    }, 50);
+
+                    // Scroll na vrh main sadržaja
+                    const mainElement = document.querySelector('main');
+                    if (mainElement) {
+                        const navHeight = document.querySelector('nav').offsetHeight;
+                        const mainTop = mainElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                        window.scrollTo({ top: mainTop, behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Navbar Scroll Behavior & Back to Top Logic
+        const navbar = document.querySelector('nav');
+        const logo = navbar.querySelector('a[href="index.html"]');
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+
+            // Navbar scroll behavior
+            if (scrollY > 50) {
+                // Scrolled state - add background and reduce padding
+                navbar.classList.remove('py-8');
+                navbar.classList.add('py-3', 'bg-white/80', 'dark:bg-black/80', 'backdrop-blur-xl', 'shadow-lg');
+                logo.classList.remove('w-10', 'md:w-32');
+                logo.classList.add('w-8', 'md:w-24');
+            } else {
+                // Top of page - original state
+                navbar.classList.remove('py-3', 'bg-white/80', 'dark:bg-black/80', 'backdrop-blur-xl', 'shadow-lg');
+                navbar.classList.add('py-8');
+                logo.classList.remove('w-8', 'md:w-24');
+                logo.classList.add('w-10', 'md:w-32');
+            }
+
+            // Back to top button visibility
+            if (scrollY > 500) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-10');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-10');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Register GSAP plugins
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+            }
+
+            renderMenuItems();
+            
+            setTimeout(initMobileStackCards, 50);
+
+            // GSAP Animations
+            if (typeof gsap !== 'undefined') {
+                // Hero section animation
+                gsap.from('section[class*="text-center"] span', {
+                    y: -20,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power2.out"
+                });
+
+                gsap.from('section[class*="text-center"] h2', {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: 0.2,
+                    ease: "power2.out"
+                });
+
+                gsap.from('section[class*="text-center"] p', {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: 0.4,
+                    ease: "power2.out"
+                });
+
+                // Category headers on scroll
+                gsap.utils.toArray('section[id] h3').forEach(header => {
+                    gsap.from(header, {
+                        x: -50,
+                        opacity: 0,
+                        duration: 0.8,
+                        scrollTrigger: {
+                            trigger: header,
+                            start: "top 80%",
+                        }
+                    });
+                });
+
+                // Parallax orbs
+                const orb1 = document.getElementById('orb1');
+                const orb2 = document.getElementById('orb2');
+                const orb3 = document.getElementById('orb3');
+
+                if (orb1) {
+                    gsap.to(orb1, {
+                        y: -180,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: 'body',
+                            start: 'top top',
+                            end: 'bottom bottom',
+                            scrub: 1.5,
+                        }
+                    });
+                }
+                if (orb2) {
+                    gsap.to(orb2, {
+                        y: 220,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: 'body',
+                            start: 'top top',
+                            end: 'bottom bottom',
+                            scrub: 2,
+                        }
+                    });
+                }
+                if (orb3) {
+                    gsap.to(orb3, {
+                        y: -150,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: 'body',
+                            start: 'top top',
+                            end: 'bottom bottom',
+                            scrub: 1,
+                        }
+                    });
+                }
+
+                // Parallax cards — blagi fade+lift na svakoj kartici
+                gsap.utils.toArray('section[id] .grid > *').forEach(card => {
+                    gsap.from(card, {
+                        y: 40,
+                        opacity: 0,
+                        duration: 0.6,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: card,
+                            start: 'top 90%',
+                        }
+                    });
+                });
+            }
+        });
+
+        // ===== kraj ostalih scripti =====
+        </script>
+
+    <!-- PONUDA TJEDNA POPUP HTML -->
+    <div id="weekly-offer-overlay" style="
+        display:none; position:fixed; inset:0; z-index:9999;
+        background:rgba(0,0,0,0.75); backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+        align-items:center; justify-content:center;
+        padding:1.5rem; opacity:0; transition:opacity 0.4s ease;
+    ">
+        <div id="weekly-offer-card" style="
+            background:linear-gradient(135deg,#1a1a1a 0%,#2d2000 50%,#1a1a1a 100%);
+            border:1px solid rgba(212,175,55,0.6); border-radius:28px;
+            max-width:420px; width:100%; overflow:hidden;
+            box-shadow:0 32px 80px rgba(0,0,0,0.6);
+            transform:scale(0.88) translateY(30px);
+            transition:transform 0.45s cubic-bezier(0.34,1.56,0.64,1),opacity 0.4s ease;
+            opacity:0; position:relative;
+        ">
+            <button onclick="closeWeeklyOffer()" style="
+                position:absolute; top:14px; right:14px; z-index:10;
+                background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2);
+                border-radius:50%; width:36px; height:36px; display:flex;
+                align-items:center; justify-content:center; color:white;
+                font-size:18px; cursor:pointer; line-height:1;
+            ">&times;</button>
+            <div style="
+                position:absolute; top:18px; left:18px;
+                background:linear-gradient(135deg,#d4af37,#f5cc5c);
+                color:#1a0e00; font-size:11px; font-weight:700;
+                letter-spacing:0.08em; text-transform:uppercase;
+                padding:5px 12px; border-radius:20px;
+            ">&#x2b50; Ponuda tjedna</div>
+            <div style="width:100%; height:240px; overflow:hidden; position:relative;">
+                <img src="images/menu-webp/palacinke/dubai.webp" alt="Dubai palačinka"
+                    style="width:100%; height:100%; object-fit:cover;" width="400" height="300" loading="lazy">
+                <div style="position:absolute; bottom:0; left:0; right:0; height:100px;
+                    background:linear-gradient(to top,#1a0e00,transparent);"></div>
+            </div>
+            <div style="padding:20px 24px 28px;">
+                <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:10px;">
+                    <h2 style="font-family:'Playfair Display',Georgia,serif; color:white;
+                        font-size:28px; font-weight:700; line-height:1.2; margin:0;">Dubai<br>palačinka</h2>
+                    <div style="text-align:right;">
+                        <div style="font-family:'Playfair Display',Georgia,serif;
+                            color:#d4af37; font-size:36px; font-weight:700;">9 &euro;</div>
+                        <div style="color:rgba(255,255,255,0.5); font-size:12px; margin-top:2px;">cijena tjedna</div>
+                    </div>
+                </div>
+                <p style="color:rgba(255,255,255,0.7); font-size:14px; line-height:1.6;
+                    margin:0 0 22px; font-family:'Montserrat',sans-serif;">
+                    Kremasta pistacijeva krema, hrskavi kadaif i čokolada savijeni u savršenu palačinku. Naš tjedni specijalitet!
+                </p>
+                <div style="display:flex; gap:12px;">
+                    <button onclick="orderWeeklyOffer()" style="
+                        flex:1; background:linear-gradient(135deg,#d4af37,#f5cc5c);
+                        color:#1a0e00; border:none; border-radius:14px; padding:14px 20px;
+                        font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px;
+                        cursor:pointer; box-shadow:0 4px 20px rgba(212,175,55,0.4);
+                    ">Pogledaj ponudu &rarr;</button>
+                    <button onclick="closeWeeklyOffer()" style="
+                        background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);
+                        border-radius:14px; padding:14px 16px; color:rgba(255,255,255,0.7);
+                        font-family:'Montserrat',sans-serif; font-size:13px; cursor:pointer; white-space:nowrap;
+                    ">Zatvori</button>
+                </div>
+                <p style="color:rgba(255,255,255,0.35); font-size:11px; text-align:center;
+                    margin:14px 0 0; font-family:'Montserrat',sans-serif;">
+                    &#9201; Ponuda vrijedi još <span id="offer-days-left"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== PONUDA TJEDNA =====
+        (function () {
+            const OFFER_KEY = 'aroma_ponuda_v2'; // novi ključ, resetira stare
+
+            const overlay = document.getElementById('weekly-offer-overlay');
+            const card   = document.getElementById('weekly-offer-card');
+            const daysEl = document.getElementById('offer-days-left');
+
+            if (!overlay || !card) {
+                console.warn('Popup: elementi nisu pronađeni!');
+                return;
+            }
+
+            // Broj dana do kraja ponude
+            const expiry = new Date('2026-03-21T23:59:59');
+            const msLeft = expiry - new Date();
+            if (msLeft <= 0) { return; }
+
+            const d = Math.ceil(msLeft / 86400000);
+            if (daysEl) daysEl.textContent = d + (d === 1 ? ' dan' : ' dana');
+
+            // Prikaži samo jednom po sesiji
+            if (sessionStorage.getItem(OFFER_KEY)) { return; }
+
+            function show() {
+                overlay.style.display = 'flex';
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        overlay.style.opacity = '1';
+                        card.style.transform  = 'scale(1) translateY(0)';
+                        card.style.opacity    = '1';
+                    });
+                });
+                document.body.style.overflow = 'hidden';
+            }
+
+            window.closeWeeklyOffer = function () {
+                overlay.style.opacity = '0';
+                card.style.opacity    = '0';
+                card.style.transform  = 'scale(0.9) translateY(20px)';
+                setTimeout(function () {
+                    overlay.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 400);
+                sessionStorage.setItem(OFFER_KEY, '1');
+            };
+
+            window.orderWeeklyOffer = function () {
+                window.closeWeeklyOffer();
+                setTimeout(function () {
+                    // Pronađi Dubai karticu po naslovu
+                    var headers = document.querySelectorAll('#palacinke-items h4');
+                    var dubaiCard = null;
+                    headers.forEach(function(h) {
+                        if (h.textContent.toLowerCase().indexOf('dubai') !== -1) {
+                            dubaiCard = h.closest('.stack-card-wrapper') || h.closest('.menu-card') || h;
+                        }
+                    });
+                    if (dubaiCard) {
+                        var navH = document.querySelector('nav') ? document.querySelector('nav').offsetHeight : 80;
+                        var top = dubaiCard.getBoundingClientRect().top + window.scrollY - navH - 20;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
+                        // Zlatni glow efekt - aktivira se nakon što scroll završi
+                        setTimeout(function () {
+                            var card = dubaiCard.querySelector('.menu-card') || dubaiCard;
+                            card.classList.remove('dubai-gold-glow');
+                            void card.offsetWidth; // reset za ponovnu animaciju
+                            card.classList.add('dubai-gold-glow');
+                            setTimeout(function () { card.classList.remove('dubai-gold-glow'); }, 3600);
+                        }, 900);
+                    } else {
+                        scrollToCategory('palacinke');
+                    }
+                }, 450);
+            };
+
+            setTimeout(show, 700);
+        })();
+    </script>
+
+    <footer class="text-center py-4 text-xs text-gray-400 dark:text-gray-600">
+        Digitalni cjenik izradio <a href="https://icstudio.neocities.org" target="_blank" rel="noopener noreferrer" class="hover:text-aroma-gold transition-colors duration-200">ICStudio</a>
+    </footer>
+
+    <!-- GDPR-Compliant Cookie Consent Banner -->
+    <div id="cookie-banner" style="z-index: 20000;"
+        class="fixed inset-0 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        
+        <div class="relative bg-gradient-to-br from-amber-100 via-yellow-50 to-amber-50 dark:from-amber-900/95 dark:via-yellow-900/95 dark:to-orange-900/95 backdrop-blur-xl border-4 border-amber-200/60 dark:border-amber-700/60 shadow-2xl rounded-3xl max-w-lg mx-4 overflow-hidden">
+            <div class="relative z-10 px-8 py-8">
+                <div class="text-center mb-6">
+                    <div class="text-6xl mb-3">🍪</div>
+                    <h3 class="font-serif text-3xl font-black mb-2 text-amber-950 dark:text-amber-50">
+                        Kolačići & Privatnost
+                    </h3>
+                    <p class="text-sm text-amber-900 dark:text-amber-100 leading-relaxed">
+                        Koristimo kolačiće za funkcionalnost stranice i analitiku. 
+                        <a href="politika-privatnosti.html" target="_blank" 
+                           class="text-amber-950 dark:text-amber-50 underline decoration-2 font-bold hover:decoration-amber-900">
+                            Politika privatnosti
+                        </a>
+                    </p>
+                </div>
+                
+                <!-- ✅ Granular Consent Options -->
+                <div class="space-y-3 mb-6 text-left text-sm">
+                    <label class="flex items-start gap-3 p-3 bg-white/40 dark:bg-black/20 rounded-lg cursor-not-allowed">
+                        <input type="checkbox" checked disabled class="mt-1 w-5 h-5 rounded">
+                        <div class="flex-1">
+                            <div class="font-bold text-amber-950 dark:text-amber-50">Neophodni kolačići</div>
+                            <div class="text-xs text-amber-800 dark:text-amber-200 mt-1">
+                                Omogućavaju osnovne funkcije stranice (obavezno)
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="flex items-start gap-3 p-3 bg-white/40 dark:bg-black/20 rounded-lg hover:bg-white/60 dark:hover:bg-black/30 transition-all cursor-pointer">
+                        <input type="checkbox" id="analytics-consent" class="mt-1 w-5 h-5 rounded border-amber-700">
+                        <div class="flex-1">
+                            <div class="font-bold text-amber-950 dark:text-amber-50">Analitički kolačići</div>
+                            <div class="text-xs text-amber-800 dark:text-amber-200 mt-1">
+                                Google Analytics - pomoću poboljšavamo stranicu
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="flex items-start gap-3 p-3 bg-white/40 dark:bg-black/20 rounded-lg hover:bg-white/60 dark:hover:bg-black/30 transition-all cursor-pointer">
+                        <input type="checkbox" id="marketing-consent" class="mt-1 w-5 h-5 rounded border-amber-700">
+                        <div class="flex-1">
+                            <div class="font-bold text-amber-950 dark:text-amber-50">Marketing kolačići</div>
+                            <div class="text-xs text-amber-800 dark:text-amber-200 mt-1">
+                                Personalizirani oglasi i remarketing
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="cookie-decline"
+                        class="flex-1 px-6 py-3 rounded-full border-3 border-amber-900/40 dark:border-amber-100/40 bg-amber-200/60 dark:bg-amber-800/60 text-amber-950 dark:text-amber-50 font-black text-sm hover:bg-amber-300/80 dark:hover:bg-amber-700/80 hover:scale-105 transition-all duration-200 shadow-lg">
+                        Samo neophodni
+                    </button>
+                    <button id="cookie-accept-selected"
+                        class="flex-1 px-6 py-3 rounded-full bg-gradient-to-r from-yellow-600 via-amber-600 to-yellow-600 text-white font-black text-sm shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                        Odabrano
+                    </button>
+                    <button id="cookie-accept-all"
+                        class="flex-1 px-6 py-3 rounded-full bg-gradient-to-r from-aroma-gold via-yellow-500 to-aroma-gold text-amber-950 font-black text-sm shadow-xl shadow-aroma-gold/50 hover:shadow-2xl hover:shadow-aroma-gold/70 transition-all duration-300 hover:scale-110 active:scale-95 border-3 border-yellow-600/50">
+                        ✓ Sve
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ GDPR Cookie Consent Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const cookieAcceptAllBtn = document.getElementById('cookie-accept-all');
+            const cookieAcceptSelectedBtn = document.getElementById('cookie-accept-selected');
+            const cookieDeclineBtn = document.getElementById('cookie-decline');
+            
+            if (!cookieBanner) return;
+            
+            const cookieConsent = {
+                save: (choices) => {
+                    try {
+                        localStorage.setItem('cookieConsent', JSON.stringify({
+                            ...choices,
+                            timestamp: Date.now(),
+                            version: '1.0'
+                        }));
+                    } catch (e) {
+                        console.error('Failed to save consent:', e);
+                    }
+                },
+                load: () => {
+                    try {
+                        return JSON.parse(localStorage.getItem('cookieConsent') || '{}');
+                    } catch {
+                        return {};
+                    }
+                }
+            };
+            
+            const existingConsent = cookieConsent.load();
+            if (!existingConsent.timestamp) {
+                setTimeout(() => {
+                    cookieBanner.classList.remove('opacity-0', 'pointer-events-none');
+                }, 1000);
+            }
+            
+            if (cookieAcceptAllBtn) {
+                cookieAcceptAllBtn.addEventListener('click', () => {
+                    cookieConsent.save({
+                        necessary: true,
+                        analytics: true,
+                        marketing: true
+                    });
+                    cookieBanner.classList.add('opacity-0', 'pointer-events-none');
+                });
+            }
+            
+            if (cookieAcceptSelectedBtn) {
+                cookieAcceptSelectedBtn.addEventListener('click', () => {
+                    const analytics = document.getElementById('analytics-consent')?.checked || false;
+                    const marketing = document.getElementById('marketing-consent')?.checked || false;
+                    
+                    cookieConsent.save({
+                        necessary: true,
+                        analytics: analytics,
+                        marketing: marketing
+                    });
+                    cookieBanner.classList.add('opacity-0', 'pointer-events-none');
+                });
+            }
+            
+            if (cookieDeclineBtn) {
+                cookieDeclineBtn.addEventListener('click', () => {
+                    cookieConsent.save({
+                        necessary: true,
+                        analytics: false,
+                        marketing: false
+                    });
+                    cookieBanner.classList.add('opacity-0', 'pointer-events-none');
+                });
+            }
+        });
+    </script>
+
+    <!-- ✅ COMPREHENSIVE IMAGE PROTECTION SCRIPT -->
+    <script>
+        (function() {
+            'use strict';
+            
+            // 1. Disable Right-Click on Images
+            document.addEventListener('contextmenu', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                    console.warn('⚠️ Image download is disabled');
+                    return false;
+                }
+            }, false);
+            
+            // 2. Prevent Drag & Drop for all images
+            document.addEventListener('dragstart', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                    return false;
+                }
+            }, false);
+            
+            // 3. Disable keyboard shortcuts for saving images
+            document.addEventListener('keydown', function(e) {
+                // Ctrl+S / Cmd+S (Save)
+                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                    e.preventDefault();
+                    console.warn('⚠️ Saving is disabled on this page');
+                    return false;
+                }
+                // Prevent Print Screen (limited effectiveness)
+                if (e.key === 'PrintScreen') {
+                    console.warn('⚠️ Screenshot detected');
+                }
+            }, false);
+            
+            // 4. Apply protection to dynamically loaded images
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    mutation.addedNodes.forEach(function(node) {
+                        if (node.tagName === 'IMG') {
+                            node.addEventListener('contextmenu', function(e) {
+                                e.preventDefault();
+                                return false;
+                            });
+                            node.addEventListener('dragstart', function(e) {
+                                e.preventDefault();
+                                return false;
+                            });
+                        }
+                    });
+                });
+            });
+            
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+            
+            // 5. Protect against inspect element image extraction
+            const images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                // Add transparent overlay
+                img.style.pointerEvents = 'auto';
+                
+                // Prevent selection
+                img.addEventListener('selectstart', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                // Additional drag protection
+                img.setAttribute('draggable', 'false');
+                img.ondragstart = function() { return false; };
+            });
+            
+            // 6. Console warning for developers
+            console.log(
+                '%c⚠️ UPOZORENJE / WARNING',
+                'color: #ff0000; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);'
+            );
+            console.log(
+                '%cSve slike na ovoj stranici su zaštićene autorskim pravima Aroma Slastičarne.\n' +
+                'Neovlašteno preuzimanje, kopiranje ili distribucija je zabranjena.\n\n' +
+                'All images on this page are copyrighted by Aroma Slastičarna.\n' +
+                'Unauthorized download, copying, or distribution is prohibited.',
+                'color: #c5a059; font-size: 14px; line-height: 1.6;'
+            );
+            
+        })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</body>
+
+</html>

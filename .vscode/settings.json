@@ -1,0 +1,7 @@
+{
+  "html.validate.scripts": false,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "js/ts.implicitProjectConfig.checkJs": false,
+  "vscode-pets.throwBallWithMouse": true
+}

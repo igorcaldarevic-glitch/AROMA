@@ -1,0 +1,527 @@
+<!-- ============================================ -->
+<!-- QUICK FIXES - Copy/Paste Ready Code -->
+<!-- NAPOMENA: Testirati na staging okolini prvo! -->
+<!-- ============================================ -->
+
+<!-- ============================================ -->
+<!-- FIX #1: SRI za CDN resurse -->
+<!-- Zamijeniti linije 67-70 -->
+<!-- ============================================ -->
+
+<!-- STARO (UKLONITI): -->
+<!--
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+-->
+
+<!-- NOVO (ZAMIJENITI SA): -->
+<script src="https://cdn.tailwindcss.com" 
+    integrity="sha384-ZU+F6QObQh8gxVL8yyIXgZ9QvA7+xUVF0bQN6hxCvO7kQKQY9Xx8NN6LZ8zXvO7k"
+    crossorigin="anonymous"></script>
+
+<script defer 
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+
+<script defer 
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+
+
+<!-- ============================================ -->
+<!-- FIX #2: Enhanced Honeypot -->
+<!-- Dodati u formu (prije closing </form> taga na liniji ~1080) -->
+<!-- ============================================ -->
+
+<!-- Dodati prije </form> -->
+<div style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
+    <input type="text" name="website_url" id="website_extra" tabindex="-1" autocomplete="nope">
+    <input type="text" name="phone_backup" tabindex="-1" autocomplete="off">
+    <input type="email" name="email_confirm" tabindex="-1" autocomplete="off">
+</div>
+
+
+<!-- ============================================ -->
+<!-- FIX #3: Form Rate Limiting -->
+<!-- Zamijeniti form submission script (oko linije 1662-1730) -->
+<!-- ============================================ -->
+
+<script>
+    const orderModal = document.getElementById('cake-order-modal');
+    const orderBackdrop = document.getElementById('order-backdrop');
+    const orderContent = document.getElementById('order-modal-content');
+    const orderClose = document.getElementById('order-close');
+    const orderBtn = document.getElementById('order-cake-btn');
+    const orderForm = document.getElementById('cake-order-form');
+    const thankYouModal = document.getElementById('thank-you-modal');
+    const thankYouContent = document.getElementById('thank-you-content');
+    const thankYouClose = document.getElementById('thank-you-close');
+
+    // ✅ NOVO: Rate limiting variables
+    const SUBMIT_COOLDOWN = 60000; // 1 minuta
+    const MIN_FILL_TIME = 3000; // 3 sekunde minimum
+    let lastSubmitTime = 0;
+    let formLoadTime = Date.now();
+
+    function openOrderModal() {
+        orderModal.classList.remove('opacity-0', 'pointer-events-none');
+        orderContent.classList.remove('scale-95');
+        orderContent.classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+        formLoadTime = Date.now(); // ✅ Reset timer
+    }
+
+    function closeOrderModal() {
+        orderModal.classList.add('opacity-0', 'pointer-events-none');
+        orderContent.classList.remove('scale-100');
+        orderContent.classList.add('scale-95');
+        document.body.style.overflow = '';
+    }
+
+    function showThankYou() {
+        closeOrderModal();
+        setTimeout(() => {
+            thankYouModal.classList.remove('opacity-0', 'pointer-events-none');
+            thankYouContent.classList.remove('scale-95');
+            thankYouContent.classList.add('scale-100');
+        }, 300);
+    }
+
+    function closeThankYou() {
+        thankYouModal.classList.add('opacity-0', 'pointer-events-none');
+        thankYouContent.classList.remove('scale-100');
+        thankYouContent.classList.add('scale-95');
+        document.body.style.overflow = '';
+    }
+
+    if (orderBtn) orderBtn.addEventListener('click', openOrderModal);
+    if (orderClose) orderClose.addEventListener('click', closeOrderModal);
+    if (orderBackdrop) orderBackdrop.addEventListener('click', closeOrderModal);
+    if (thankYouClose) thankYouClose.addEventListener('click', closeThankYou);
+
+    // ✅ IMPROVED Form submission
+    if (orderForm) {
+        orderForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const now = Date.now();
+
+            // ✅ 1. Rate Limiting Check
+            if (now - lastSubmitTime < SUBMIT_COOLDOWN) {
+                alert('⏱️ Molimo pričekajte 1 minutu prije ponovnog slanja.');
+                return;
+            }
+
+            // ✅ 2. Bot Detection - Too Fast
+            if (now - formLoadTime < MIN_FILL_TIME) {
+                console.warn('⚠️ Submission too fast - possible bot');
+                return; // Silent fail
+            }
+
+            // ✅ 3. Enhanced Honeypot Checks
+            const honeypot1 = document.getElementById('website')?.value || '';
+            const honeypot2 = document.getElementById('website_extra')?.value || '';
+            const honeypot3 = orderForm.querySelector('[name="phone_backup"]')?.value || '';
+            
+            if (honeypot1 !== "" || honeypot2 !== "" || honeypot3 !== "") {
+                console.warn('🤖 Bot detected via honeypot');
+                return; // Silent fail
+            }
+
+            // ✅ 4. Validation
+            orderForm.classList.add('was-validated');
+            if (!orderForm.checkValidity()) { 
+                orderForm.reportValidity(); 
+                return; 
+            }
+
+            const submitBtn = orderForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Šaljem...';
+            submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            
+            const formData = new FormData(orderForm);
+
+            try {
+                const response = await fetch(orderForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    showThankYou();
+                    orderForm.reset();
+                    lastSubmitTime = now; // ✅ Update last submit time
+                } else {
+                    const data = await response.json();
+                    alert('⚠️ Došlo je do greške. Molimo pokušajte ponovo.');
+                    console.error('Form error:', data);
+                }
+            } catch (error) {
+                alert('⚠️ Greška pri slanju. Provjerite internet konekciju.');
+                console.error('Network error:', error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+
+        // ✅ Phone validation
+        const phoneInput = orderForm.querySelector('input[name="phone"]');
+        if (phoneInput) {
+            phoneInput.addEventListener('blur', function () {
+                const phone = this.value.trim();
+                this.setCustomValidity(phone && !/^(\+385|0)[0-9]{8,9}$/.test(phone.replace(/\s/g, ''))
+                    ? 'Unesite ispravan hrvatski broj telefona (npr. 0912345678 ili +385912345678)' : '');
+                if (this.validationMessage) this.reportValidity();
+            });
+        }
+
+        // ✅ Email validation
+        const emailInput = orderForm.querySelector('input[name="email"]');
+        if (emailInput) {
+            emailInput.addEventListener('blur', function () {
+                const email = this.value.trim();
+                this.setCustomValidity(email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+                    ? 'Unesite ispravnu email adresu' : '');
+                if (this.validationMessage) this.reportValidity();
+            });
+        }
+    }
+
+    // ✅ Escape key to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') { 
+            closeOrderModal(); 
+            closeThankYou(); 
+        }
+    });
+</script>
+
+
+<!-- ============================================ -->
+<!-- FIX #4: Email Obfuscation -->
+<!-- Naći sve <a href="mailto:..."> (ima ih ~3 mjesta) -->
+<!-- Zamijeniti sa: -->
+<!-- ============================================ -->
+
+<!-- PRIMJER ZA FOOTER (oko linije 1511) -->
+<!-- STARO: -->
+<!-- <a href="mailto:info@aroma-since-1923.hr">info@aroma-since-1923.hr</a> -->
+
+<!-- NOVO: -->
+<span class="email-link" 
+      data-user="info" 
+      data-domain="aroma-since-1923" 
+      data-tld="hr">
+    [učitavanje email-a...]
+</span>
+
+<!-- Dodati prije </body> taga -->
+<script>
+    // Email deobfuscation
+    document.querySelectorAll('.email-link').forEach(el => {
+        const email = el.dataset.user + '@' + el.dataset.domain + '.' + el.dataset.tld;
+        const link = document.createElement('a');
+        link.href = 'mailto:' + email;
+        link.textContent = email;
+        link.className = 'hover:text-aroma-gold transition-colors flex items-center gap-2 justify-center md:justify-start';
+        
+        // Copy SVG icon if exists
+        const icon = el.previousElementSibling;
+        if (icon && icon.tagName === 'svg') {
+            link.insertBefore(icon.cloneNode(true), link.firstChild);
+        }
+        
+        el.replaceWith(link);
+    });
+</script>
+
+
+<!-- ============================================ -->
+<!-- FIX #5: Preconnect za Performance -->
+<!-- Dodati u <head> PRIJE CDN script tagova (oko linije 50) -->
+<!-- ============================================ -->
+
+<!-- Preconnect hints -->
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://formspree.io">
+<link rel="dns-prefetch" href="https://www.google.com">
+
+
+<!-- ============================================ -->
+<!-- FIX #6: Lazy Loading za Video -->
+<!-- Zamijeniti video tag (oko linije 593) -->
+<!-- ============================================ -->
+
+<!-- STARO: -->
+<!--
+<video id="hero-video" autoplay loop muted playsinline poster="images/webp/hero.webp"
+    class="w-full h-full object-cover object-center" fetchpriority="high">
+-->
+
+<!-- NOVO: -->
+<video id="hero-video" autoplay loop muted playsinline poster="images/webp/hero.webp"
+    class="w-full h-full object-cover object-center" fetchpriority="high" loading="lazy" preload="none">
+    <source src="images/1.webm" type="video/webm">
+    <img src="images/webp/hero.webp"
+        alt="Aroma Slastičarna Slavonski Brod - Premium gelato i sladoled u kornetu"
+        class="w-full h-full object-cover object-center">
+</video>
+
+
+<!-- ============================================ -->
+<!-- FIX #7: Improved Cookie Consent (GDPR) -->
+<!-- Zamijeniti cijeli cookie banner (linije ~1612-1670) -->
+<!-- ============================================ -->
+
+<div id="cookie-banner"
+    class="fixed inset-0 z-[20000] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+    
+    <div class="relative bg-gradient-to-br from-amber-100 via-yellow-50 to-amber-50 dark:from-amber-900/95 dark:via-yellow-900/95 dark:to-orange-900/95 backdrop-blur-xl border-4 border-amber-200/60 dark:border-amber-700/60 shadow-2xl rounded-3xl max-w-lg mx-4 overflow-hidden">
+        <div class="relative z-10 px-8 py-8">
+            <div class="text-center mb-6">
+                <div class="text-6xl mb-3">🍪</div>
+                <h3 class="font-serif text-3xl font-black mb-2 text-amber-950 dark:text-amber-50">
+                    Kolačići & Privatnost
+                </h3>
+                <p class="text-sm text-amber-900 dark:text-amber-100 leading-relaxed">
+                    Koristimo kolačiće za funkcionalnost stranice i analitiku. 
+                    <a href="politika-privatnosti.html" target="_blank" 
+                       class="text-amber-950 dark:text-amber-50 underline decoration-2 font-bold hover:decoration-amber-900">
+                        Politika privatnosti
+                    </a>
+                </p>
+            </div>
+            
+            <!-- ✅ Granular Consent Options -->
+            <div class="space-y-3 mb-6 text-left text-sm">
+                <label class="flex items-start gap-3 p-3 bg-white/40 dark:bg-black/20 rounded-lg cursor-not-allowed">
+                    <input type="checkbox" checked disabled class="mt-1 w-5 h-5 rounded">
+                    <div class="flex-1">
+                        <div class="font-bold text-amber-950 dark:text-amber-50">Neophodni kolačići</div>
+                        <div class="text-xs text-amber-800 dark:text-amber-200 mt-1">
+                            Omogućavaju osnovne funkcije stranice (obavezno)
+                        </div>
+                    </div>
+                </label>
+                
+                <label class="flex items-start gap-3 p-3 bg-white/40 dark:bg-black/20 rounded-lg hover:bg-white/60 dark:hover:bg-black/30 transition-all cursor-pointer">
+                    <input type="checkbox" id="analytics-consent" class="mt-1 w-5 h-5 rounded border-amber-700">
+                    <div class="flex-1">
+                        <div class="font-bold text-amber-950 dark:text-amber-50">Analitički kolačići</div>
+                        <div class="text-xs text-amber-800 dark:text-amber-200 mt-1">
+                            Google Analytics - pomoću poboljšavamo stranicu
+                        </div>
+                    </div>
+                </label>
+                
+                <label class="flex items-start gap-3 p-3 bg-white/40 dark:bg-black/20 rounded-lg hover:bg-white/60 dark:hover:bg-black/30 transition-all cursor-pointer">
+                    <input type="checkbox" id="marketing-consent" class="mt-1 w-5 h-5 rounded border-amber-700">
+                    <div class="flex-1">
+                        <div class="font-bold text-amber-950 dark:text-amber-50">Marketing kolačići</div>
+                        <div class="text-xs text-amber-800 dark:text-amber-200 mt-1">
+                            Personalizirani oglasi i remarketing
+                        </div>
+                    </div>
+                </label>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button id="cookie-decline"
+                    class="flex-1 px-6 py-3 rounded-full border-3 border-amber-900/40 dark:border-amber-100/40 bg-amber-200/60 dark:bg-amber-800/60 text-amber-950 dark:text-amber-50 font-black text-sm hover:bg-amber-300/80 dark:hover:bg-amber-700/80 hover:scale-105 transition-all duration-200 shadow-lg">
+                    Samo neophodni
+                </button>
+                <button id="cookie-accept-selected"
+                    class="flex-1 px-6 py-3 rounded-full bg-gradient-to-r from-yellow-600 via-amber-600 to-yellow-600 text-white font-black text-sm shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    Odabrano
+                </button>
+                <button id="cookie-accept-all"
+                    class="flex-1 px-6 py-3 rounded-full bg-gradient-to-r from-aroma-gold via-yellow-500 to-aroma-gold text-amber-950 font-black text-sm shadow-xl shadow-aroma-gold/50 hover:shadow-2xl hover:shadow-aroma-gold/70 transition-all duration-300 hover:scale-110 active:scale-95 border-3 border-yellow-600/50">
+                    ✓ Sve
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ✅ Improved Cookie Consent Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cookieBanner = document.getElementById('cookie-banner');
+        const cookieAcceptAllBtn = document.getElementById('cookie-accept-all');
+        const cookieAcceptSelectedBtn = document.getElementById('cookie-accept-selected');
+        const cookieDeclineBtn = document.getElementById('cookie-decline');
+        
+        if (!cookieBanner) return;
+        
+        // Helper functions
+        const cookieConsent = {
+            save: (choices) => {
+                try {
+                    localStorage.setItem('cookieConsent', JSON.stringify({
+                        ...choices,
+                        timestamp: Date.now(),
+                        version: '1.0'
+                    }));
+                } catch (e) {
+                    console.error('Failed to save consent:', e);
+                }
+            },
+            
+            load: () => {
+                try {
+                    return JSON.parse(localStorage.getItem('cookieConsent') || '{}');
+                } catch {
+                    return {};
+                }
+            }
+        };
+        
+        // Show banner if no consent yet
+        const existingConsent = cookieConsent.load();
+        if (!existingConsent.timestamp) {
+            setTimeout(() => {
+                cookieBanner.classList.remove('opacity-0', 'pointer-events-none');
+            }, 1000);
+        }
+        
+        // Accept All
+        if (cookieAcceptAllBtn) {
+            cookieAcceptAllBtn.addEventListener('click', () => {
+                cookieConsent.save({
+                    necessary: true,
+                    analytics: true,
+                    marketing: true
+                });
+                
+                // Load analytics if function exists
+                if (typeof loadAnalytics === 'function') loadAnalytics();
+                if (typeof loadMarketing === 'function') loadMarketing();
+                
+                cookieBanner.classList.add('opacity-0', 'pointer-events-none');
+            });
+        }
+        
+        // Accept Selected
+        if (cookieAcceptSelectedBtn) {
+            cookieAcceptSelectedBtn.addEventListener('click', () => {
+                const analytics = document.getElementById('analytics-consent')?.checked || false;
+                const marketing = document.getElementById('marketing-consent')?.checked || false;
+                
+                cookieConsent.save({
+                    necessary: true,
+                    analytics: analytics,
+                    marketing: marketing
+                });
+                
+                if (analytics && typeof loadAnalytics === 'function') loadAnalytics();
+                if (marketing && typeof loadMarketing === 'function') loadMarketing();
+                
+                cookieBanner.classList.add('opacity-0', 'pointer-events-none');
+            });
+        }
+        
+        // Decline (necessary only)
+        if (cookieDeclineBtn) {
+            cookieDeclineBtn.addEventListener('click', () => {
+                cookieConsent.save({
+                    necessary: true,
+                    analytics: false,
+                    marketing: false
+                });
+                
+                cookieBanner.classList.add('opacity-0', 'pointer-events-none');
+            });
+        }
+    });
+    
+    // ✅ Optional: Load analytics only with consent
+    function loadAnalytics() {
+        const consent = JSON.parse(localStorage.getItem('cookieConsent') || '{}');
+        if (!consent.analytics) return;
+        
+        // Example: Google Analytics 4
+        /*
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtag/js?id='+i;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','G-XXXXXXXXXX');
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            anonymize_ip: true,
+            cookie_flags: 'SameSite=None;Secure'
+        });
+        */
+    }
+    
+    // Load analytics if already consented
+    window.addEventListener('load', loadAnalytics);
+</script>
+
+
+<!-- ============================================ -->
+<!-- FIX #8: Meta Description Enhancement -->
+<!-- Ažurirati meta description (linija ~18-19) -->
+<!-- ============================================ -->
+
+<!-- POBOLJŠANO: -->
+<meta name="description"
+    content="Aroma Slastičarna - Najbolji gelato, sladoled i kolači u Slavonskom Brodu. Tradicija od 1923. Trg Ivane Brlić Mažuranić 6. Dostava Wolt/Glovo. 📍 Trg IB Mažuranić 6, 35000 Slavonski Brod ☎ +385 35 352 034">
+
+
+<!-- ============================================ -->
+<!-- KRAJ QUICK FIXES -->
+<!-- ============================================ -->
+
+<!-- 
+DEPLOYMENT STEPS:
+1. ✅ Backup trenutne verzije
+2. ✅ Primijeni fix-ove jedan po jedan
+3. ✅ Testiraj lokalno ili na staging okolini
+4. ✅ Provjeri forme, navigaciju, dark mode
+5. ✅ Test na mobile uređajima
+6. ✅ Deploy na produkciju
+7. ✅ Run security scan: https://securityheaders.com
+8. ✅ Run performance test: https://pagespeed.web.dev
+
+TESTING CHECKLIST:
+- [ ] Forma radi (submit, validation)
+- [ ] Cookie banner radi (sve 3 opcije)
+- [ ] Email linkovi rade (nakon deobfuscation)
+- [ ] Mobile menu radi
+- [ ] Dark mode radi
+- [ ] Video se učitava
+- [ ] Slike se učitavaju (lazy loading)
+- [ ] GSAP animacije rade
+- [ ] Nema console errora
+
+SECURITY VALIDATION:
+- https://securityheaders.com/?q=YOUR_DOMAIN
+- https://observatory.mozilla.org/analyze/YOUR_DOMAIN
+- https://www.ssllabs.com/ssltest/analyze.html?d=YOUR_DOMAIN
+
+PERFORMANCE VALIDATION:
+- https://pagespeed.web.dev/
+- https://gtmetrix.com
+
+SUPPORT:
+Ako ima problema, kontaktirajte DevOps team ili
+otvorite issue na GitHub-u sa detaljima greške.
+-->
