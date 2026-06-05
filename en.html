@@ -385,8 +385,8 @@
       gtag('js', new Date());
       gtag('config', 'G-S2D0STMCEQ');
     </script>
-    <script defer src="/js/vendor/gsap.min.js"></script>
-    <script defer src="/js/vendor/ScrollTrigger.min.js"></script>
+    <script defer src="js/vendor/gsap.min.js"></script>
+    <script defer src="js/vendor/ScrollTrigger.min.js"></script>
 </head>
 <body class="antialiased font-sans relative bg-gradient-to-br from-[#f7fcf0] via-[#e6f5d0] to-[#d5e8b3] min-h-screen text-gray-900 dark:bg-none dark:bg-[#0f0f0f] dark:text-white transition-colors duration-300">
 
@@ -1721,6 +1721,10 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+            console.warn('GSAP or ScrollTrigger not loaded — animations disabled');
+            return;
+        }
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.config({ fastScrollEnd: true, ignoreMobileResize: true });
 
