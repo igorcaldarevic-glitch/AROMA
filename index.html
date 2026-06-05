@@ -40,7 +40,7 @@
          ne kao meta tagovi (browseri ih ignoriraju kao meta). -->
     <!-- CSP - Content Security Policy -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://region1.analytics.google.com; frame-src https://www.google.com;">
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cdn.tailwindcss.com https://formspree.io https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://region1.analytics.google.com; frame-src https://www.google.com;">
 
     <!-- Preload Critical Resources -->
     <link rel="preload" as="image" href="images/webp/hero.webp" fetchpriority="high">
@@ -404,8 +404,8 @@
       gtag('js', new Date());
       gtag('config', 'G-S2D0STMCEQ');
     </script>
-    <script defer src="js/vendor/gsap.min.js"></script>
-    <script defer src="js/vendor/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body
