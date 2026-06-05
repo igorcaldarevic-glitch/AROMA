@@ -37,7 +37,7 @@
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <!-- CSP - Content Security Policy (prilagoditi prema potrebama) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://region1.analytics.google.com; frame-src https://www.google.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://region1.analytics.google.com; frame-src https://www.google.com;">
 
     <!-- Preload Critical Resources -->
     <link rel="preload" as="image" href="images/webp/hero.webp" fetchpriority="high">
@@ -58,11 +58,10 @@
     <link rel="icon" type="image/png" href="images/webp/amblem.webp">
     
     <!-- Preconnect to external domains for faster loading -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://formspree.io">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/dist/tailwind.css">
     
 
 
@@ -149,40 +148,6 @@
             unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
         }
     </style>
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        'aroma-bg': '#0f0f0f',
-                        'aroma-gold': '#C5A059',
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Montserrat"', 'sans-serif'],
-                    },
-                    animation: {
-                        'loop-scroll': 'loop-scroll 25s linear infinite',
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        'loop-scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        },
-                        'blob': {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(5px, -10px) scale(1.05)' },
-                            '66%': { transform: 'translate(-5px, 5px) scale(0.95)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 
     <style>
         @media (prefers-reduced-motion: reduce) {
@@ -387,11 +352,13 @@
       gtag('js', new Date());
       gtag('config', 'G-S2D0STMCEQ');
     </script>
+    <script defer src="/js/vendor/gsap.min.js"></script>
+    <script defer src="/js/vendor/ScrollTrigger.min.js"></script>
 </head>
 <body class="antialiased font-sans relative bg-gradient-to-br from-[#f7fcf0] via-[#e6f5d0] to-[#d5e8b3] min-h-screen text-gray-900 dark:bg-none dark:bg-[#0f0f0f] dark:text-white transition-colors duration-300">
 
     <!-- Background Texture -->
-    <div class="fixed inset-0 z-0 opacity-5 dark:opacity-5 pointer-events-none mix-blend-multiply dark:mix-blend-normal" style="background-image: url('images/papira.png'); background-repeat: repeat; background-size: 500px;"></div>
+    <div class="fixed inset-0 z-0 opacity-5 dark:opacity-5 pointer-events-none mix-blend-multiply dark:mix-blend-normal" style="background-image: url('images/webp/papira-tile.webp'); background-image: image-set(url('images/webp/papira-tile.avif') type('image/avif'), url('images/webp/papira-tile.webp') type('image/webp')); background-repeat: repeat; background-size: 125px;"></div>
 
 
     <!-- Schema.org LocalBusiness JSON-LD for Local SEO -->
@@ -606,7 +573,7 @@
         <div class="absolute inset-0 z-0">
             <video id="hero-video" autoplay loop muted playsinline poster="images/webp/hero.webp" class="w-full h-full object-cover object-center" loading="lazy" preload="none">
                 <source src="images/1.webm" type="video/webm">
-                <img src="images/webp/hero.webp" alt="Aroma Slastičarna Slavonski Brod - Premium gelato i sladoled u kornetu" class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" width="1280" height="720">
+                <img src="images/webp/hero.webp" alt="Aroma Slastičarna Slavonski Brod - Premium gelato i sladoled u kornetu" class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async" width="1280" height="720">
             </video>
             <!-- Subtle overlay for better text readability -->
             <div class="absolute inset-0 bg-white/30 dark:bg-black/20 md:bg-gradient-to-r md:from-white/40 md:via-white/20 md:to-transparent md:dark:from-black/30 md:dark:via-black/10 md:dark:to-transparent"></div>
@@ -656,7 +623,7 @@
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="relative reveal-up group">
                     <div class="absolute inset-0 border-2 border-aroma-gold rounded-2xl transform translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
-                    <img src="images/webp/aroma-in.webp" alt="Innenraum der Aroma Konditorei Slavonski Brod - modern gestalteter Raum" width="600" height="450" class="w-full h-auto object-cover rounded-2xl shadow-2xl border-2 border-aroma-gold" loading="lazy">
+                    <img src="images/webp/aroma-in.webp" alt="Innenraum der Aroma Konditorei Slavonski Brod - modern gestalteter Raum" width="382" height="510" class="w-full h-auto object-cover rounded-2xl shadow-2xl border-2 border-aroma-gold" loading="lazy">
                 </div>
                 <div class="about-text-reveal">
                     <span class="text-aroma-gold tracking-[0.2em] uppercase text-sm font-bold mb-4 block">Tradition seit 1923.</span>
@@ -1723,11 +1690,12 @@
     </script>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.config({ fastScrollEnd: true, ignoreMobileResize: true });
 
-        // 1. Kinetic Title Animation (happens immediately on page load)
-        window.addEventListener('DOMContentLoaded', () => {
+        // 1. Kinetic Title Animation
+        {
             const kineticWords = document.querySelectorAll('.kinetic-word');
             if (kineticWords.length > 0) {
                 gsap.set(kineticWords, { 
@@ -1777,7 +1745,7 @@
                     });
                 }, 50);
             });
-        });
+        }
 
         // 2. Hero Animacije (Dolaze sa strane) - sa provjerom
         const revealText = document.querySelector(".reveal-text");
@@ -2028,6 +1996,7 @@
 
         // (Mobile Menu Logic moved to isolated script below)
 
+        }); // end DOMContentLoaded
     </script>
     
     <!-- Email Deobfuscation Script -->
@@ -2231,7 +2200,6 @@
             links.forEach(function (l) { l.addEventListener('click', toggle); });
         })();
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 </body>
 </html>

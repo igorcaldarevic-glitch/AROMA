@@ -23,8 +23,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="images/webp/amblem.webp">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/dist/tailwind.css">
 
     <style>
         /* Local Font Faces */
@@ -69,24 +69,6 @@
         }
     </style>
 
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        'aroma-bg': '#0f0f0f',
-                        'aroma-gold': '#C5A059',
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Montserrat"', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-
     <style>
         /* Background Image with Opacity */
         body {
@@ -100,9 +82,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('images/papira.png');
-            background-size: 50%;
-            background-position: center;
+            background-image: url('images/webp/papira-tile.webp');
+            background-image: image-set(url('images/webp/papira-tile.avif') type('image/avif'), url('images/webp/papira-tile.webp') type('image/webp'));
+            background-size: 125px;
+            background-position: top left;
             background-repeat: repeat;
             opacity: 0.12;
             z-index: -1;

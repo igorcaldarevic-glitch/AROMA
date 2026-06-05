@@ -27,7 +27,7 @@
     <!-- Security -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://region1.analytics.google.com; frame-src https://www.google.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://region1.analytics.google.com; frame-src https://www.google.com;">
 
     <!-- Canonical & Hreflang -->
     <link rel="canonical" href="https://www.aroma-since-1923.hr/torte.html">
@@ -44,11 +44,10 @@
     <link rel="preload" as="font" href="fonts/montserrat-v31-latin-400.woff2" type="font/woff2" crossorigin>
 
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="dns-prefetch" href="https://www.google.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/dist/tailwind.css">
 
     <style>
         @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:400; font-display:swap; src:url('fonts/playfair-display-v40-latin-regular.woff2') format('woff2'); }
@@ -57,18 +56,6 @@
         @font-face { font-family:'Montserrat'; font-style:normal; font-weight:600; font-display:swap; src:url('fonts/montserrat-v31-latin-600.woff2') format('woff2'); }
         img { -webkit-user-select:none; user-select:none; -webkit-user-drag:none; }
     </style>
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: { 'aroma-gold': '#C5A059' },
-                    fontFamily: { 'serif': ['"Playfair Display"','serif'], 'sans': ['"Montserrat"','sans-serif'] }
-                }
-            }
-        }
-    </script>
 
     <!-- LocalBusiness + FoodMenu Schema -->
     <script type="application/ld+json">
@@ -145,7 +132,7 @@
             <img src="images/webp/1.webp"
                 alt="Torte Slavonski Brod – ručno rađena čokoladna torta Aroma slastičarne"
                 class="w-full h-full object-cover opacity-25 dark:opacity-15"
-                loading="eager" fetchpriority="high" width="800" height="600">
+                loading="eager" fetchpriority="high" decoding="async" width="800" height="600">
         </div>
         <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <span class="text-aroma-gold tracking-[0.4em] uppercase text-xs font-bold mb-4 block">Slavonski Brod · od 1923.</span>

@@ -20,12 +20,19 @@ ErrorDocument 404 /404.html
     Header always unset X-Powered-By
     
     # Cache Control for static assets
-    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf)$">
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|svg|ico|woff|woff2|ttf)$">
         Header set Cache-Control "max-age=31536000, public, immutable"
     </FilesMatch>
-    
+
     <FilesMatch "\.(css|js)$">
-        Header set Cache-Control "max-age=2592000, public, must-revalidate"
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+
+    # HTML — always revalidate
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
     </FilesMatch>
 </IfModule>
 
@@ -33,6 +40,12 @@ ErrorDocument 404 /404.html
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
     AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# AVIF and WebP MIME types (required for image-set() fallback to work correctly)
+<IfModule mod_mime.c>
+    AddType image/avif .avif
+    AddType image/webp .webp
 </IfModule>
 
 # Browser Caching
@@ -43,6 +56,7 @@ ErrorDocument 404 /404.html
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
@@ -54,11 +68,11 @@ ErrorDocument 404 /404.html
     ExpiresByType font/otf "access plus 1 year"
     
     # CSS and JavaScript
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
     
-    # HTML
+    # HTML — always revalidate
     ExpiresByType text/html "access plus 0 seconds"
     
     # Video
