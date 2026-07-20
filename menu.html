@@ -718,6 +718,45 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Alergeni Card -->
+                    <div
+                        class="flex-1 border-2 border-aroma-gold/40 rounded-lg overflow-hidden bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm transition-all hover:border-aroma-gold/60">
+                        <button onclick="toggleFooterSection('alergeni')"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between group">
+                            <strong
+                                class="text-sm md:text-base text-gray-700 dark:text-gray-300 group-hover:text-aroma-gold transition-colors">Alergeni</strong>
+                            <svg id="alergeni-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor"
+                                class="w-5 h-5 text-aroma-gold transition-transform duration-300">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                        <div id="alergeni-content"
+                            class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-4">
+                                <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-3">
+                                    Sukladno Uredbi (EU) br. 1169/2011, jela mogu sadržavati sljedeće alergene:
+                                </p>
+                                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs md:text-sm text-gray-500 dark:text-gray-400">
+                                    <li>🌾 Žitarice s glutenom (Cereals with gluten)</li>
+                                    <li>🦀 Rakovi (Crustaceans)</li>
+                                    <li>🍳 Jaja (Eggs)</li>
+                                    <li>🐟 Riba (Fish)</li>
+                                    <li>🥜 Kikiriki (Peanuts)</li>
+                                    <li>🌱 Soja (Soybeans)</li>
+                                    <li>🥛 Mlijeko (Milk)</li>
+                                    <li>🌰 Orašasti plodovi (Tree nuts)</li>
+                                    <li>🌿 Celer (Celery)</li>
+                                    <li>🔶 Gorušica (Mustard)</li>
+                                    <li>⚪ Sjemenke sezama (Sesame seeds)</li>
+                                    <li>🍷 Sumporni dioksid i sulfiti (Sulphur dioxide and sulphites)</li>
+                                    <li>🌼 Lupina (Lupin)</li>
+                                    <li>🐚 Mekušci (Molluscs)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -782,91 +821,106 @@
                         name: "Kava",
                         description: "coffee",
                         price: "1,90 €",
-                        image: "images/menu-webp/topli-napici/kava.webp"
+                        image: "images/menu-webp/topli-napici/kava.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Kava s mlijekom",
                         description: "coffee with milk",
                         price: "2,00 €",
-                        image: "images/menu-webp/topli-napici/Kava-s-mlijekom.webp"
+                        image: "images/menu-webp/topli-napici/Kava-s-mlijekom.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Kava sa šlagom",
                         description: "coffee with cream",
                         price: "2,00 €",
-                        image: "images/menu-webp/topli-napici/Kava-sa-šlagom.webp"
+                        image: "images/menu-webp/topli-napici/Kava-sa-šlagom.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Kava bez kofeina",
                         description: "decaff",
                         price: "2,50 €",
-                        image: "images/menu-webp/topli-napici/Decaf-Coffee.webp"
+                        image: "images/menu-webp/topli-napici/Decaf-Coffee.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Cappuccino",
                         description: "cappuccino",
                         price: "2,50 €",
-                        image: "images/menu-webp/topli-napici/Cappuccino.webp"
+                        image: "images/menu-webp/topli-napici/Cappuccino.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Cap. Iz aparata",
                         description: "machine cappuccino",
                         price: "2,50 €",
-                        image: "images/menu-webp/topli-napici/Cappuccino-iz-aparata.webp"
+                        image: "images/menu-webp/topli-napici/Cappuccino-iz-aparata.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Bijela kava",
                         description: "white coffee",
                         price: "2,50 €",
-                        image: "images/menu-webp/topli-napici/Bijela-kava.webp"
+                        image: "images/menu-webp/topli-napici/Bijela-kava.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Kakao",
                         description: "cocoa",
                         price: "2,80 €",
-                        image: "images/menu-webp/topli-napici/kakao1.webp"
+                        image: "images/menu-webp/topli-napici/kakao1.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Vruća čokolada",
                         description: "hot chocolate",
                         price: "3,50 €",
-                        image: "images/menu-webp/topli-napici/vruca-cokolada.webp"
+                        image: "images/menu-webp/topli-napici/vruca-cokolada.webp",
+                        allergens: "6,7"
                     },
                     {
                         name: "Čaj s limunom i medom",
                         description: "tea with lemon and honey",
                         price: "2,00 €",
-                        image: "images/menu-webp/topli-napici/caj2.webp"
+                        image: "images/menu-webp/topli-napici/caj2.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Med",
                         description: "honey",
                         price: "0,30 €",
-                        image: "images/menu-webp/topli-napici/Med.webp"
+                        image: "images/menu-webp/topli-napici/Med.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Ledena kava",
                         description: "ice coffee",
                         price: "3,30 €",
-                        image: "images/menu-webp/topli-napici/ledena-kava.webp"
+                        image: "images/menu-webp/topli-napici/ledena-kava.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Kava za van",
                         description: "coffee to go",
                         price: "2,00 €",
-                        image: "images/menu-webp/topli-napici/caffe-to-go.webp"
+                        image: "images/menu-webp/topli-napici/caffe-to-go.webp",
+                        allergens: "OVISI"
                     },
                     {
                         name: "Kava sa sladoledom",
                         description: "coffee with ice cream",
                         price: "5,00 €",
-                        image: "images/menu-webp/topli-napici/Kava-sa-sladoledom.webp"
+                        image: "images/menu-webp/topli-napici/Kava-sa-sladoledom.webp",
+                        allergens: "3,7"
                     },
                     {
                         name: "Nescafe",
                         description: "nescafe",
                         price: "2,50 €",
-                        image: "images/menu-webp/topli-napici/Nescaffe1.webp"
+                        image: "images/menu-webp/topli-napici/Nescaffe1.webp",
+                        allergens: "-"
                     }
                 ],
 
@@ -875,97 +929,113 @@
                         name: "Coca-Cola / Coca-Cola Zero (razne vrste)",
                         description: "0,25 l",
                         price: "3,20 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Coca-cola.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Coca-cola.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Fanta",
                         description: "0,25 l",
                         price: "3,20 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Fanta.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Fanta.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Sprite",
                         description: "0,25 l",
                         price: "3,20 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Sprite.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Sprite.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Schweppes (razni okusi)",
                         description: "0,25 l",
                         price: "3,20 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Schweppes1.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Schweppes1.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Prirodni sokovi",
                         description: "0,20 l",
                         price: "3,40 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Prirodni-sok.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Prirodni-sok.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Ledeni caj",
                         description: "0,25 l",
                         price: "3,00 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Ledeni-caj.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Ledeni-caj.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Limunada",
                         description: "0,20 l",
                         price: "2,40 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Limunada2.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada2.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Limunada",
                         description: "0,30 l",
                         price: "3,00 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Limunada3.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada3.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Limunada",
                         description: "0,50 l",
                         price: "3,40 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Limunada5.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Limunada5.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Cedevita",
                         description: "0,20 l",
                         price: "2,80 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Cedevita.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Cedevita.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Cockta",
                         description: "0,275 l",
                         price: "3,20 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/cocta.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/cocta.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Orangina",
                         description: "0,25 l",
                         price: "3,40 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/orangina1.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/orangina1.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Römerquelle Emotion",
                         description: "0,33 l",
                         price: "3,00 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-emotion.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-emotion.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Römerquelle Mineralna",
                         description: "0,33 l",
                         price: "3,00 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-mineralna.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Romerquelle-mineralna.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Prirodna voda",
                         description: "0,33 l",
                         price: "3,00 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Prirodna-voda.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Prirodna-voda.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Jana s okusom",
                         description: "0,33 l",
                         price: "3,00 €",
-                        image: "images/menu-webp/Bezalkoholna-pica/Jana.webp"
+                        image: "images/menu-webp/Bezalkoholna-pica/Jana.webp",
+                        allergens: "-"
                     }
                 ],
 
@@ -974,43 +1044,50 @@
                         name: "Ljetni smoothie",
                         description: "Refreshing summer drink",
                         price: "3,90 €",
-                        image: "images/menu-webp/Smoothie/Ljetni.webp"
+                        image: "images/menu-webp/Smoothie/Ljetni.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Ostanifit",
                         description: "Stay fit smoothie",
                         price: "3,70 €",
-                        image: "images/menu-webp/Smoothie/ostani-fit.webp"
+                        image: "images/menu-webp/Smoothie/ostani-fit.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Antistres",
                         description: "Anti-stress smoothie",
                         price: "3,70 €",
-                        image: "images/menu-webp/Smoothie/Antistres.webp"
+                        image: "images/menu-webp/Smoothie/Antistres.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Zdravanavika",
                         description: "Healthy habit smoothie",
                         price: "3,70 €",
-                        image: "images/menu-webp/Smoothie/Zdrava-navika.webp"
+                        image: "images/menu-webp/Smoothie/Zdrava-navika.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Sportskiosjećaj",
                         description: "Sports feeling smoothie",
                         price: "3,70 €",
-                        image: "images/menu-webp/Smoothie/Sportski-osjecaj.webp"
+                        image: "images/menu-webp/Smoothie/Sportski-osjecaj.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Bez doktora",
                         description: "No doctor smoothie",
                         price: "3,70 €",
-                        image: "images/menu-webp/Smoothie/Bez-doktora.webp"
+                        image: "images/menu-webp/Smoothie/Bez-doktora.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Juicy orange",
                         description: "Orange juice",
                         price: "3,40 €",
-                        image: "images/menu-webp/Smoothie/Juicy-Orange.webp"
+                        image: "images/menu-webp/Smoothie/Juicy-Orange.webp",
+                        allergens: "-"
                     }
                 ],
 
@@ -1019,97 +1096,113 @@
                         name: "Ferrero torta",
                         description: "Bogati okus lješnjaka, čokolade i hrskavih vafla.",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/ferrero2.webp"
+                        image: "images/menu-webp/Kolači/ferrero2.webp",
+                        allergens: "1,3,6,7,8"
                     },
                     {
                         name: "Šumska čarolija",
                         description: "Lagana i osvježavajuća torta sa šumskim voćem.",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/sumska.webp"
+                        image: "images/menu-webp/Kolači/sumska.webp",
+                        allergens: "1,3,7"
                     },
                     {
                         name: "Jaffa torta",
                         description: "Savršen spoj osvježavajuće naranče i meke čokolade.",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/jaffa2.webp"
+                        image: "images/menu-webp/Kolači/jaffa2.webp",
+                        allergens: "1,3,6,7"
                     },
                     {
                         name: "Krempita",
                         description: "Klasična slastica s bogatom vanilija kremom i hrskavim korama.",
                         price: "3,00 €",
-                        image: "images/menu-webp/Kolači/krempita.webp"
+                        image: "images/menu-webp/Kolači/krempita.webp",
+                        allergens: "1,3,7"
                     },
                     {
                         name: "Nutella kocka",
                         description: "Omiljeni namaz u obliku meke i ukusne kocke.",
                         price: "3,00 €",
-                        image: "images/menu-webp/Kolači/nutella-kocka.webp"
+                        image: "images/menu-webp/Kolači/nutella-kocka.webp",
+                        allergens: "1,6,7,8"
                     },
                     {
                         name: "Medovik",
                         description: "Tradicionalna torta s medenim korama i laganom kremom.",
                         price: "3,00 €",
-                        image: "images/menu-webp/Kolači/medovik.webp"
+                        image: "images/menu-webp/Kolači/medovik.webp",
+                        allergens: "1,3,7"
                     },
                     {
                         name: "Pistachio cheesecake",
                         description: "Kremasti sirni desert obogaćen pastom od pistacija.",
                         price: "4,90 €",
-                        image: "images/menu-webp/Kolači/pistacio-cheesecake.webp"
+                        image: "images/menu-webp/Kolači/pistacio-cheesecake.webp",
+                        allergens: "1,3,7,8"
                     },
                     {
                         name: "Dubai torta",
                         description: "Egzotična i raskošna torta koja spaja najbolje okuse.",
                         price: "4,90 €",
-                        image: "images/menu-webp/Kolači/dubai.webp"
+                        image: "images/menu-webp/Kolači/dubai.webp",
+                        allergens: "1,6,7,8"
                     },
                     {
                         name: "Maxi King",
                         description: "Savršeni spoj karamele, čokolade, lješnjaka i kremastog punjenja.",
                         price: "4,90 €",
-                        image: "images/menu-webp/Kolači/maxi-king.webp"
+                        image: "images/menu-webp/Kolači/maxi-king.webp",
+                        allergens: "1,6,7,8"
                     },
                     {
                         name: "Tiramisu",
                         description: "Talijanski klasik s mascarpone kremom i piškotama",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/tiramisu.webp"
+                        image: "images/menu-webp/Kolači/tiramisu.webp",
+                        allergens: "1,3,7"
                     },
                     {
                         name: "Kesten pire",
                         description: "Kesten pire sa šlagom",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/kesten-pire.webp"
+                        image: "images/menu-webp/Kolači/kesten-pire.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Baklava",
                         description: "Tradicionalna baklava s orasima",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/baklava1.webp"
+                        image: "images/menu-webp/Kolači/baklava1.webp",
+                        allergens: "1,8"
                     },
                     {
                         name: "Bueno",
                         description: "Kremasti bueno kolač",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/bueno.webp"
+                        image: "images/menu-webp/Kolači/bueno.webp",
+                        allergens: "1,6,7,8"
                     },
                     {
                         name: "Ledeni vjetar",
                         description: "Bogat voćni kolač",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/ledeni-vjetar.webp"
+                        image: "images/menu-webp/Kolači/ledeni-vjetar.webp",
+                        allergens: "1,3,7"
                     },
                     {
                         name: "Trileće",
                         description: "Kolač s mliječnim preljevom",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/trilece.webp"
+                        image: "images/menu-webp/Kolači/trilece.webp",
+                        allergens: "1,3,7"
                     },
                     {
                         name: "Šampita",
                         description: "Pjenasta slatka poslastica",
                         price: "3,50 €",
-                        image: "images/menu-webp/Kolači/torta2.webp"
+                        image: "images/menu-webp/Kolači/torta2.webp",
+                        allergens: "1,3"
                     }
                 ],
 
@@ -1118,97 +1211,113 @@
                         name: "Dubai",
                         description: "Krema od pistacije, kadaif, čokolada",
                         price: "9,00 €",
-                        image: "images/menu-webp/palacinke/dubai.webp"
+                        image: "images/menu-webp/palacinke/dubai.webp",
+                        allergens: "1,3,7,8"
                     },
                     {
                         name: "Nutella",
                         description: "Orginalni lješnjak namaz",
                         price: "4,50 €",
-                        image: "images/menu-webp/palacinke/nutella.webp"
+                        image: "images/menu-webp/palacinke/nutella.webp",
+                        allergens: "1,3,6,7,8"
                     },
                     {
                         name: "Linolada",
                         description: "Mliječni namaz s lješnjacima",
                         price: "4,50 €",
-                        image: "images/menu-webp/palacinke/linolada.webp"
+                        image: "images/menu-webp/palacinke/linolada.webp",
+                        allergens: "1,3,6,7,8"
                     },
                     {
                         name: "Prazna",
                         description: "Domaće tijesto",
                         price: "4,00 €",
-                        image: "images/menu-webp/palacinke/prazna.webp"
+                        image: "images/menu-webp/palacinke/prazna.webp",
+                        allergens: "1,3,7"
                     },
                     {
                         name: "Kinder Bueno",
                         description: "Kinder bueno krema i komadići",
                         price: "6,50 €",
-                        image: "images/menu-webp/palacinke/bueno.webp"
+                        image: "images/menu-webp/palacinke/bueno.webp",
+                        allergens: "1,3,6,7,8"
                     },
                     {
                         name: "M&M's",
                         description: "Čokoladni bomboni",
                         price: "6,50 €",
-                        image: "images/menu-webp/palacinke/m&m.webp"
+                        image: "images/menu-webp/palacinke/m&m.webp",
+                        allergens: "1,3,6,7"
                     },
                     {
                         name: "Raffaello",
                         description: "Krema od kokosa i badema",
                         price: "6,50 €",
-                        image: "images/menu-webp/palacinke/rafaelo.webp"
+                        image: "images/menu-webp/palacinke/rafaelo.webp",
+                        allergens: "1,3,7,8"
                     },
                     {
                         name: "Oreo",
                         description: "Kremasti keks namaz",
                         price: "6,50 €",
-                        image: "images/menu-webp/palacinke/oreo.webp"
+                        image: "images/menu-webp/palacinke/oreo.webp",
+                        allergens: "1,3,6,7"
                     },
                     {
                         name: "Milka",
                         description: "Nježna mliječna čokolada",
                         price: "6,50 €",
-                        image: "images/menu-webp/palacinke/milka.webp"
+                        image: "images/menu-webp/palacinke/milka.webp",
+                        allergens: "1,3,6,7"
                     },
                     {
                         name: "Kinder Maxi King",
                         description: "Karamela i lješnjak",
                         price: "7,00 €",
-                        image: "images/menu-webp/palacinke/maxi-king.webp"
+                        image: "images/menu-webp/palacinke/maxi-king.webp",
+                        allergens: "1,3,6,7,8"
                     },
                     {
                         name: "Šumsko Voće",
                         description: "Osvježavajući voćni preljev",
                         price: "7,00 €",
-                        image: "images/menu-webp/palacinke/sumsko-voce.webp"
+                        image: "images/menu-webp/palacinke/sumsko-voce.webp",
+                        allergens: "1,3,7"
                     },
                     {
                         name: "Toffifee",
                         description: "Lješnjak u karameli",
                         price: "7,00 €",
-                        image: "images/menu-webp/palacinke/toffife.webp"
+                        image: "images/menu-webp/palacinke/toffife.webp",
+                        allergens: "1,3,7,8"
                     },
                     {
                         name: "Snickers",
                         description: "Kikiriki i karamela",
                         price: "7,00 €",
-                        image: "images/menu-webp/palacinke/snickers.webp"
+                        image: "images/menu-webp/palacinke/snickers.webp",
+                        allergens: "1,3,5,7"
                     },
                     {
                         name: "Jaffa",
                         description: "Naranča i čokolada",
                         price: "7,00 €",
-                        image: "images/menu-webp/palacinke/jaffa.webp"
+                        image: "images/menu-webp/palacinke/jaffa.webp",
+                        allergens: "1,3,6,7"
                     },
                     {
                         name: "Ferrero",
                         description: "Hruskavi lješnjak namaz",
                         price: "7,00 €",
-                        image: "images/menu-webp/palacinke/fererro.webp"
+                        image: "images/menu-webp/palacinke/fererro.webp",
+                        allergens: "1,3,6,7,8"
                     },
                     {
                         name: "Bananko",
                         description: "Čokoladna bananica",
                         price: "7,00 €",
-                        image: "images/menu-webp/palacinke/bananko.webp"
+                        image: "images/menu-webp/palacinke/bananko.webp",
+                        allergens: "1,3,6,7"
                     }
                 ],
 
@@ -1217,204 +1326,239 @@
                         name: "Svi okusi",
                         description: "All flavors - kugla/scoop",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/svi.webp"
+                        image: "images/menu-webp/Sladoled/svi.webp",
+                        allergens: "OVISI"
                     },
                      {
                         name: "Vanilija",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/Vanilija1.webp"
+                        image: "images/menu-webp/Sladoled/Vanilija1.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Čokolada",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/cokolada.webp"
+                        image: "images/menu-webp/Sladoled/cokolada.webp",
+                        allergens: "6,7"
                     },
                     {
                         name: "Rum Punch",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/rum-punch.webp"
+                        image: "images/menu-webp/Sladoled/rum-punch.webp",
+                        allergens: "7"
                     },
                     {
                         name: "KinderBueno",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/bueno.webp"
+                        image: "images/menu-webp/Sladoled/bueno.webp",
+                        allergens: "6,7,8"
                     },
                     {
                         name: "Nutella",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/nutella.webp"
+                        image: "images/menu-webp/Sladoled/nutella.webp",
+                        allergens: "6,7,8"
                     },
                     {
                         name: "Red Bull",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/red-bull.webp"
+                        image: "images/menu-webp/Sladoled/red-bull.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Zelena Jabuka",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/zelena-jabuka.webp"
+                        image: "images/menu-webp/Sladoled/zelena-jabuka.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Lješnjak",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/ljesnjak.webp"
+                        image: "images/menu-webp/Sladoled/ljesnjak.webp",
+                        allergens: "7,8"
                     },
                     {
                         name: "Kokos",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/kokos.webp"
+                        image: "images/menu-webp/Sladoled/kokos.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Menta",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/Menta1.webp"
+                        image: "images/menu-webp/Sladoled/Menta1.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Jagoda",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/jagoda1.webp"
+                        image: "images/menu-webp/Sladoled/jagoda1.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Karamela",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/karamela1.webp"
+                        image: "images/menu-webp/Sladoled/karamela1.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Pistacija",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/pistacio.webp"
+                        image: "images/menu-webp/Sladoled/pistacio.webp",
+                        allergens: "7,8"
                     },
                     {
                         name: "Mango",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/mango.webp"
+                        image: "images/menu-webp/Sladoled/mango.webp",
+                        allergens: "7"
                     },{
                         name: "Ferrero",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/ferrero.webp"
+                        image: "images/menu-webp/Sladoled/ferrero.webp",
+                        allergens: "6,7,8"
                     },
                     {
                         name: "Cookies",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/keksolino.webp"
+                        image: "images/menu-webp/Sladoled/keksolino.webp",
+                        allergens: "1,6,7"
                     },
                     {
                         name: "Jogurt",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/jogurt.webp"
+                        image: "images/menu-webp/Sladoled/jogurt.webp",
+                        allergens: "7"
                     },{
                         name: "Amarena",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/rum-punch.webp"
+                        image: "images/menu-webp/Sladoled/rum-punch.webp",
+                        allergens: "7,12"
                     },
                     {
                         name: "Banana",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/banana.webp"
+                        image: "images/menu-webp/Sladoled/banana.webp",
+                        allergens: "7"
                     },
                     {
                         name: "šumsko voće",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/sumsko-voce.webp"
+                        image: "images/menu-webp/Sladoled/sumsko-voce.webp",
+                        allergens: "7"
                     },{
                         name: "Keksolino",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/keksolino.webp"
+                        image: "images/menu-webp/Sladoled/keksolino.webp",
+                        allergens: "1,6,7"
                     },{
                         name: "Štrumpf",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/strumf.webp"
+                        image: "images/menu-webp/Sladoled/strumf.webp",
+                        allergens: "7"
                     },
                     {
                         name: "Dubai Čokolada",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/dubai.webp"
+                        image: "images/menu-webp/Sladoled/dubai.webp",
+                        allergens: "1,6,7,8"
                     },
                     {
                         name: "Oreo",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/oreo.webp"
+                        image: "images/menu-webp/Sladoled/oreo.webp",
+                        allergens: "1,6,7"
                     },{
                         name: "Limun",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/limun.webp"
+                        image: "images/menu-webp/Sladoled/limun.webp",
+                        allergens: "7"
                     },{
                         name: "Specijalitet Kuće",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/dubai.webp"
+                        image: "images/menu-webp/Sladoled/dubai.webp",
+                        allergens: "OVISI"
                     },
                     {
                         name: "Jagoda",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/jagoda1.webp"
+                        image: "images/menu-webp/Sladoled/jagoda1.webp",
+                        allergens: "7"
                     },{
                         name: "Jaffa",
                         description: "since 1923",
                         price: "2,00 €",
-                        image: "images/menu-webp/Sladoled/jaffa.webp"
+                        image: "images/menu-webp/Sladoled/jaffa.webp",
+                        allergens: "6,7"
                     },
                     {
                         name: "Mini posuda (4 kuglice)",
                         description: "",
                         price: "8,00 €",
-                        image: "images/menu-webp/Sladoled/mini.webp"
+                        image: "images/menu-webp/Sladoled/mini.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Mala posuda (5+1 gratis)",
                         description: "",
                         price: "10,00 €",
-                        image: "images/menu-webp/Sladoled/mala.webp"
+                        image: "images/menu-webp/Sladoled/mala.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Srednja posuda (7+1 gratis)",
                         description: "",
                         price: "14,00 €",
-                        image: "images/menu-webp/Sladoled/srednja.webp"
+                        image: "images/menu-webp/Sladoled/srednja.webp",
+                        allergens: "-"
                     },
                     {
                         name: "Velika posuda (10+2 gratis)",
                         description: "",
                         price: "20,00 €",
-                        image: "images/menu-webp/Sladoled/velika.webp"
+                        image: "images/menu-webp/Sladoled/velika.webp",
+                        allergens: "-"
                     },
                     {
                         name: "SLATKI KORNET",
                         description: "",
                         price: "0,50 €",
-                        image: "images/menu-webp/Sladoled/waffel.webp"
+                        image: "images/menu-webp/Sladoled/waffel.webp",
+                        allergens: "1,3,7"
                     },
                     {
                         name: "Dječji sladoled",
                         description: "",
                         price: "1,50 €",
-                        image: "images/menu-webp/Sladoled/djeci.webp"
+                        image: "images/menu-webp/Sladoled/djeci.webp",
+                        allergens: "OVISI"
                     }
                    
                 ]
@@ -2716,6 +2860,12 @@
                         image: "images/menu-webp/Sladoled/jaffa.webp"
                     },
                     {
+                        name: "Mini Behälter (4 Kugeln)",
+                        description: "",
+                        price: "8,00 €",
+                        image: "images/menu-webp/Sladoled/mini.webp"
+                    },
+                    {
                         name: "Kleiner Behälter (5+1 gratis)",
                         description: "",
                         price: "10,00 €",
@@ -2750,6 +2900,67 @@
         };
 
         let currentLanguage = 'hr';
+
+        // Alergeni sukladno Uredbi (EU) br. 1169/2011 - 14 EU alergena
+        const ALLERGEN_NAMES = {
+            1: { hr: "Žitarice s glutenom", en: "Cereals containing gluten", de: "Glutenhaltiges Getreide" },
+            2: { hr: "Rakovi", en: "Crustaceans", de: "Krebstiere" },
+            3: { hr: "Jaja", en: "Eggs", de: "Eier" },
+            4: { hr: "Riba", en: "Fish", de: "Fisch" },
+            5: { hr: "Kikiriki", en: "Peanuts", de: "Erdnüsse" },
+            6: { hr: "Soja", en: "Soybeans", de: "Soja" },
+            7: { hr: "Mlijeko", en: "Milk", de: "Milch" },
+            8: { hr: "Orašasti plodovi", en: "Tree nuts", de: "Schalenfrüchte" },
+            9: { hr: "Celer", en: "Celery", de: "Sellerie" },
+            10: { hr: "Gorušica", en: "Mustard", de: "Senf" },
+            11: { hr: "Sjemenke sezama", en: "Sesame seeds", de: "Sesamsamen" },
+            12: { hr: "Sumporni dioksid i sulfiti", en: "Sulphur dioxide and sulphites", de: "Schwefeldioxid und Sulfite" },
+            13: { hr: "Lupina", en: "Lupin", de: "Lupinen" },
+            14: { hr: "Mekušci", en: "Molluscs", de: "Weichtiere" }
+        };
+
+        const ALLERGEN_ICONS = {
+            1: "🌾", 2: "🦀", 3: "🍳", 4: "🐟", 5: "🥜", 6: "🌱", 7: "🥛",
+            8: "🌰", 9: "🌿", 10: "🔶", 11: "⚪", 12: "🍷", 13: "🌼", 14: "🐚"
+        };
+
+        const ALLERGEN_LABEL = { hr: "Alergeni:", en: "Allergens:", de: "Allergene:" };
+        const ALLERGEN_VARIES = { hr: "Ovisi o odabiru gosta", en: "Depends on guest's choice", de: "Abhängig von der Wahl des Gastes" };
+
+        function getAllergenHtml(category, index) {
+            const hrItems = menuData.hr[category];
+            if (!hrItems || !hrItems[index]) return '';
+            const allergensValue = hrItems[index].allergens;
+            if (!allergensValue || allergensValue === '-') return '';
+
+            const label = ALLERGEN_LABEL[currentLanguage] || ALLERGEN_LABEL.hr;
+
+            if (allergensValue === 'OVISI') {
+                const text = ALLERGEN_VARIES[currentLanguage] || ALLERGEN_VARIES.hr;
+                return `
+                    <div class="mt-2 flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
+                        <span class="font-semibold">${label}</span>
+                        <span class="italic">${text}</span>
+                    </div>
+                `;
+            }
+
+            const codes = allergensValue.split(',').map(c => c.trim()).filter(Boolean);
+            if (codes.length === 0) return '';
+
+            const badges = codes.map(code => {
+                const icon = ALLERGEN_ICONS[code] || '';
+                const name = (ALLERGEN_NAMES[code] && ALLERGEN_NAMES[code][currentLanguage]) || '';
+                return `<span class="inline-flex items-center" title="${name}">${icon}</span>`;
+            }).join(' ');
+
+            return `
+                <div class="mt-2 flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 flex-wrap">
+                    <span class="font-semibold">${label}</span>
+                    <span class="flex items-center gap-1 text-sm">${badges}</span>
+                </div>
+            `;
+        }
 
         // Toggle Footer Section
         function toggleFooterSection(section) {
@@ -2830,6 +3041,7 @@
                                         <div class="mb-4">
                                             <h4 class="font-serif text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">${sviOkusiItem.name}</h4>
                                             <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${sviOkusiItem.description}</p>
+                                            ${getAllergenHtml('sladoled', items.indexOf(sviOkusiItem))}
                                         </div>
                                         <div class="flex justify-between items-center pt-3 border-t border-aroma-gold/20 mt-auto">
                                             <span class="text-xl md:text-2xl font-semibold tracking-tight text-aroma-gold">${sviOkusiItem.price}</span>
@@ -2854,6 +3066,7 @@
                     // prikaži samo dodatne stavke (ne sve okuse) u rubrici Sladoled
                     if (extraItems.length > 0) {
                         extraItems.forEach(item => {
+                            const _idx = items.indexOf(item);
                             const itemCard = `
                                 <div class="stack-card-wrapper h-full mt-4">
                                 <div class="menu-card bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl shadow-sm md:shadow-md p-4 md:p-6 border border-aroma-gold/30 dark:border-gray-700 hover:border-aroma-gold/70 transition-all duration-300 hover:shadow-lg hover:shadow-aroma-gold/10 h-full flex flex-col justify-between">
@@ -2862,6 +3075,7 @@
                                             <div class="mb-4">
                                                 <h4 class="font-serif text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">${item.name}</h4>
                                                 <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${item.description || ''}</p>
+                                                ${getAllergenHtml('sladoled', _idx)}
                                             </div>
                                             <div class="flex justify-between items-center pt-3 border-t border-aroma-gold/20 mt-auto">
                                                 <span class="text-xl md:text-2xl font-semibold tracking-tight text-aroma-gold">${item.price}</span>
@@ -2888,6 +3102,7 @@
                                         <div class="mb-4">
                                             <h4 class="font-serif text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">${item.name}</h4>
                                             <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${item.description}</p>
+                                            ${getAllergenHtml(category, index)}
                                         </div>
                                         <div class="flex justify-between items-center pt-3 border-t border-aroma-gold/20 mt-auto">
                                             <span class="text-xl md:text-2xl font-semibold tracking-tight text-aroma-gold">${item.price}</span>
@@ -2922,7 +3137,8 @@
 
             // Show ice cream flavors
             if (flavors.length > 0) {
-                flavors.forEach((item, index) => {
+                flavors.forEach((item) => {
+                    const _idx = items.indexOf(item);
                     const itemCard = `
                         <div class="stack-card-wrapper h-full">
                         <div class="menu-card bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl shadow-sm md:shadow-md p-4 md:p-6 border border-aroma-gold/30 dark:border-gray-700 hover:border-aroma-gold/70 transition-all duration-300 hover:shadow-lg hover:shadow-aroma-gold/10 h-full flex flex-col justify-between">
@@ -2931,6 +3147,7 @@
                                     <div class="mb-4">
                                         <h4 class="font-serif text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">${item.name}</h4>
                                         <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${item.description}</p>
+                                        ${getAllergenHtml('sladoled', _idx)}
                                     </div>
                                     <div class="flex justify-between items-center pt-3 border-t border-aroma-gold/20 mt-auto">
                                         <span class="text-xl md:text-2xl font-semibold tracking-tight text-aroma-gold">${item.price}</span>
