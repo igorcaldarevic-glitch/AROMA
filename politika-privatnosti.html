@@ -10,40 +10,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/webp/amblem.webp">
 
-    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        'aroma-bg': '#0f0f0f',
-                        'aroma-gold': '#C5A059',
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Montserrat"', 'sans-serif'],
-                    },
-                    animation: {
-                        'loop-scroll': 'loop-scroll 25s linear infinite',
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        'loop-scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        },
-                        'blob': {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(5px, -10px) scale(1.05)' },
-                            '66%': { transform: 'translate(-5px, 5px) scale(0.95)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="tailwind.css">
     
     <style>
         /* Local Font Faces */
@@ -265,8 +232,9 @@
 
     <!-- Footer -->
     <footer class="py-8 border-t border-black/10 dark:border-white/10 mt-16">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-6 text-center flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
             <p class="text-gray-500 dark:text-gray-400 text-sm">&copy; 2026 Slastičarnica Aroma. Sva prava pridržana.</p>
+            <a href="https://icstudio.ic-menu.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 text-sm hover:text-gray-900 dark:hover:text-white transition-colors opacity-60">Web Design: IC Studio</a>
         </div>
     </footer>
 

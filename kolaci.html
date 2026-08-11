@@ -47,40 +47,7 @@
     <link rel="dns-prefetch" href="https://www.google.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        'aroma-bg': '#0f0f0f',
-                        'aroma-gold': '#C5A059',
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Montserrat"', 'sans-serif'],
-                    },
-                    animation: {
-                        'loop-scroll': 'loop-scroll 25s linear infinite',
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        'loop-scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        },
-                        'blob': {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(5px, -10px) scale(1.05)' },
-                            '66%': { transform: 'translate(-5px, 5px) scale(0.95)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="tailwind.css">
 
     <style>
         @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:400; font-display:swap; src:url('fonts/playfair-display-v40-latin-regular.woff2') format('woff2'); }
@@ -140,7 +107,7 @@
     </script>
 </head>
 
-<body class="antialiased font-sans bg-gradient-to-br from-[#f7fcf0] via-[#e6f5d0] to-[#d5e8b3] dark:bg-[#0f0f0f] dark:text-white text-gray-900 min-h-screen">
+<body class="antialiased font-sans bg-gradient-to-br from-[#f7fcf0] via-[#e6f5d0] to-[#d5e8b3] dark:bg-none dark:bg-[#0f0f0f] dark:text-white text-gray-900 min-h-screen">
 
     <!-- Nav -->
     <nav class="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-xl border-b border-black/10 dark:border-white/10 py-4">
@@ -344,6 +311,7 @@
                 <a href="/torte.html" class="hover:text-gray-900 dark:hover:text-white transition-colors">Torte</a>
                 <a href="/sladoled.html" class="hover:text-gray-900 dark:hover:text-white transition-colors">Sladoled</a>
                 <a href="/politika-privatnosti.html" class="hover:text-gray-900 dark:hover:text-white transition-colors">Privatnost</a>
+                <a href="https://icstudio.ic-menu.com" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 dark:hover:text-white transition-colors opacity-60">Web Design: IC Studio</a>
             </div>
         </div>
     </footer>

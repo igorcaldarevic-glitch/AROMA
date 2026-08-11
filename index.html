@@ -66,40 +66,7 @@
     <link rel="dns-prefetch" href="https://www.google.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        'aroma-bg': '#0f0f0f',
-                        'aroma-gold': '#C5A059',
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Montserrat"', 'sans-serif'],
-                    },
-                    animation: {
-                        'loop-scroll': 'loop-scroll 25s linear infinite',
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        'loop-scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        },
-                        'blob': {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(5px, -10px) scale(1.05)' },
-                            '66%': { transform: 'translate(-5px, 5px) scale(0.95)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="tailwind.css">
 
 
 
@@ -760,7 +727,7 @@
                         alt="Unutrašnjost Aroma Slastičarne Slavonski Brod - moderno uređen prostor" width="382"
                         height="510"
                         class="w-full h-auto object-cover rounded-2xl shadow-2xl border-2 border-aroma-gold"
-                        loading="lazy">
+                        fetchpriority="high">
                 </div>
                 <div class="about-text-reveal">
                     <span class="text-aroma-gold tracking-[0.2em] uppercase text-sm font-bold mb-4 block"
@@ -1678,7 +1645,7 @@
                         class="text-gray-800 dark:text-gray-200 text-sm font-medium tracking-wider hover:text-aroma-gold transition-colors underline underline-offset-2">Politika
                         Privatnosti</a>
                 </div>
-                <a href="https://icstudio.neocities.org" target="_blank" rel="noopener noreferrer"
+                <a href="https://icstudio.ic-menu.com" target="_blank" rel="noopener noreferrer"
                     class="text-gray-800 dark:text-gray-200 text-sm font-medium tracking-wider hover:text-aroma-gold transition-all duration-300 flex items-center gap-2 group opacity-50 hover:opacity-100">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-5 h-5 transition-transform group-hover:scale-110">

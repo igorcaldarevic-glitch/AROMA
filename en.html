@@ -61,40 +61,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://formspree.io">
 
-    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        'aroma-bg': '#0f0f0f',
-                        'aroma-gold': '#C5A059',
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Montserrat"', 'sans-serif'],
-                    },
-                    animation: {
-                        'loop-scroll': 'loop-scroll 25s linear infinite',
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        'loop-scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        },
-                        'blob': {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(5px, -10px) scale(1.05)' },
-                            '66%': { transform: 'translate(-5px, 5px) scale(0.95)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="tailwind.css">
     
 
 
@@ -652,7 +619,7 @@
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="relative reveal-up group">
                     <div class="absolute inset-0 border-2 border-aroma-gold rounded-2xl transform translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
-                    <img src="images/webp/aroma-in.webp" alt="Interior of Aroma Confectionery Slavonski Brod - modern designed space" width="382" height="510" class="w-full h-auto object-cover rounded-2xl shadow-2xl border-2 border-aroma-gold" loading="lazy">
+                    <img src="images/webp/aroma-in.webp" alt="Interior of Aroma Confectionery Slavonski Brod - modern designed space" width="382" height="510" class="w-full h-auto object-cover rounded-2xl shadow-2xl border-2 border-aroma-gold" fetchpriority="high">
                 </div>
                 <div class="about-text-reveal">
                     <span class="text-aroma-gold tracking-[0.2em] uppercase text-sm font-bold mb-4 block">Tradition since 1923.</span>
@@ -1382,7 +1349,7 @@
                     <p class="text-gray-800 dark:text-gray-200 text-sm font-medium tracking-wider">&copy; 2025 Aroma Confectionery. Tradition since 1923.</p>
                     <a href="politika-privatnosti.html" class="text-gray-800 dark:text-gray-200 text-sm font-medium tracking-wider hover:text-aroma-gold transition-colors underline underline-offset-2">Privacy Policy</a>
                 </div>
-                <a href="https://icstudio.neocities.org" target="_blank" rel="noopener noreferrer" class="text-gray-800 dark:text-gray-200 text-sm font-medium tracking-wider hover:text-aroma-gold transition-all duration-300 flex items-center gap-2 group opacity-50 hover:opacity-100">
+                <a href="https://icstudio.ic-menu.com" target="_blank" rel="noopener noreferrer" class="text-gray-800 dark:text-gray-200 text-sm font-medium tracking-wider hover:text-aroma-gold transition-all duration-300 flex items-center gap-2 group opacity-50 hover:opacity-100">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform group-hover:scale-110">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
                     </svg>
