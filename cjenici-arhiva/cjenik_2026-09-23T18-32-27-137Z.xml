@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cjenik datum_generiranja="2026-09-23T18:32:27.137Z" poslovni_subjekt="Slastičarna Aroma" vrsta_prodajnog_mjesta="Ugostiteljski objekt" adresa="Trg Ivane Brlić-Mažuranić 6, 35000 Slavonski Brod" oznaka_objekta="AROMA-01" broj_skladista="01">
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Kava</naziv>
+    <mpc valuta="EUR">1.90</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">1.90</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Kava s mlijekom</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Kava sa šlagom</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Kava bez kofeina</naziv>
+    <mpc valuta="EUR">2.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Cappuccino</naziv>
+    <mpc valuta="EUR">2.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Cap. Iz aparata</naziv>
+    <mpc valuta="EUR">2.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Bijela kava</naziv>
+    <mpc valuta="EUR">2.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Kakao</naziv>
+    <mpc valuta="EUR">2.80</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.80</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Vruća čokolada</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Čaj s limunom i medom</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Med</naziv>
+    <mpc valuta="EUR">0.30</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">0.30</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Ledena kava</naziv>
+    <mpc valuta="EUR">3.30</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.30</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Kava za van</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Kava sa sladoledom</naziv>
+    <mpc valuta="EUR">5.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">5.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Topli Napici</kategorija>
+    <naziv>Nescafe</naziv>
+    <mpc valuta="EUR">2.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Coca-Cola / Coca-Cola Zero (razne vrste)</naziv>
+    <mpc valuta="EUR">3.20</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.20</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Fanta</naziv>
+    <mpc valuta="EUR">3.20</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.20</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Sprite</naziv>
+    <mpc valuta="EUR">3.20</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.20</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Schweppes (razni okusi)</naziv>
+    <mpc valuta="EUR">3.20</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.20</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Prirodni sokovi</naziv>
+    <mpc valuta="EUR">3.40</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.40</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Ledeni caj</naziv>
+    <mpc valuta="EUR">3.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Limunada</naziv>
+    <mpc valuta="EUR">2.40</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.40</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Limunada</naziv>
+    <mpc valuta="EUR">3.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Limunada</naziv>
+    <mpc valuta="EUR">3.40</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.40</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Cedevita</naziv>
+    <mpc valuta="EUR">2.80</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.80</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Cockta</naziv>
+    <mpc valuta="EUR">3.20</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.20</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Orangina</naziv>
+    <mpc valuta="EUR">3.40</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.40</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Römerquelle Emotion</naziv>
+    <mpc valuta="EUR">3.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Römerquelle Mineralna</naziv>
+    <mpc valuta="EUR">3.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Prirodna voda</naziv>
+    <mpc valuta="EUR">3.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Bezalkoholna pića</kategorija>
+    <naziv>Jana s okusom</naziv>
+    <mpc valuta="EUR">3.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Smoothie</kategorija>
+    <naziv>Ljetni smoothie</naziv>
+    <mpc valuta="EUR">3.90</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.90</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Smoothie</kategorija>
+    <naziv>Ostanifit</naziv>
+    <mpc valuta="EUR">3.70</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.70</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Smoothie</kategorija>
+    <naziv>Antistres</naziv>
+    <mpc valuta="EUR">3.70</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.70</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Smoothie</kategorija>
+    <naziv>Zdravanavika</naziv>
+    <mpc valuta="EUR">3.70</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.70</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Smoothie</kategorija>
+    <naziv>Sportskiosjećaj</naziv>
+    <mpc valuta="EUR">3.70</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.70</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Smoothie</kategorija>
+    <naziv>Bez doktora</naziv>
+    <mpc valuta="EUR">3.70</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.70</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Smoothie</kategorija>
+    <naziv>Juicy orange</naziv>
+    <mpc valuta="EUR">3.40</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.40</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Ferrero torta</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Šumska čarolija</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Jaffa torta</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Krempita</naziv>
+    <mpc valuta="EUR">3.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Nutella kocka</naziv>
+    <mpc valuta="EUR">3.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Medovik</naziv>
+    <mpc valuta="EUR">3.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Pistachio cheesecake</naziv>
+    <mpc valuta="EUR">4.90</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">4.90</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Dubai torta</naziv>
+    <mpc valuta="EUR">4.90</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">4.90</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Maxi King</naziv>
+    <mpc valuta="EUR">4.90</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">4.90</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Tiramisu</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Kesten pire</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Baklava</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Bueno</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Ledeni vjetar</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Trileće</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Kolači</kategorija>
+    <naziv>Šampita</naziv>
+    <mpc valuta="EUR">3.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">3.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Dubai</naziv>
+    <mpc valuta="EUR">9.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">9.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Nutella</naziv>
+    <mpc valuta="EUR">4.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">4.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Linolada</naziv>
+    <mpc valuta="EUR">4.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">4.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Prazna</naziv>
+    <mpc valuta="EUR">4.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">4.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Kinder Bueno</naziv>
+    <mpc valuta="EUR">6.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">6.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>M&amp;M&apos;s</naziv>
+    <mpc valuta="EUR">6.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">6.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Raffaello</naziv>
+    <mpc valuta="EUR">6.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">6.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Oreo</naziv>
+    <mpc valuta="EUR">6.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">6.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Milka</naziv>
+    <mpc valuta="EUR">6.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">6.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Kinder Maxi King</naziv>
+    <mpc valuta="EUR">7.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">7.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Šumsko Voće</naziv>
+    <mpc valuta="EUR">7.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">7.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Toffifee</naziv>
+    <mpc valuta="EUR">7.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">7.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Snickers</naziv>
+    <mpc valuta="EUR">7.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">7.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Jaffa</naziv>
+    <mpc valuta="EUR">7.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">7.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Ferrero</naziv>
+    <mpc valuta="EUR">7.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">7.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Palačinke</kategorija>
+    <naziv>Bananko</naziv>
+    <mpc valuta="EUR">7.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">7.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Svi okusi</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Vanilija</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Čokolada</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Rum Punch</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>KinderBueno</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Nutella</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Red Bull</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Zelena Jabuka</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Lješnjak</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Kokos</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Menta</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Jagoda</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Karamela</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Pistacija</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Mango</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Ferrero</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Cookies</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Jogurt</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Amarena</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Banana</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>šumsko voće</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Keksolino</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Štrumpf</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Dubai Čokolada</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Oreo</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Limun</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Specijalitet Kuće</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Jagoda</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Jaffa</naziv>
+    <mpc valuta="EUR">2.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">2.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Mini posuda (4 kuglice)</naziv>
+    <mpc valuta="EUR">8.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">8.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Mala posuda (5+1 gratis)</naziv>
+    <mpc valuta="EUR">10.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">10.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Srednja posuda (7+1 gratis)</naziv>
+    <mpc valuta="EUR">14.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">14.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Velika posuda (10+2 gratis)</naziv>
+    <mpc valuta="EUR">20.00</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">20.00</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>SLATKI KORNET</naziv>
+    <mpc valuta="EUR">0.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">0.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+  <usluga>
+    <kategorija>Sladoled</kategorija>
+    <naziv>Dječji sladoled</naziv>
+    <mpc valuta="EUR">1.50</mpc>
+    <sidrena_cijena valuta="EUR" datum="2026-09-10">1.50</sidrena_cijena>
+    <posebna_prodaja></posebna_prodaja>
+  </usluga>
+</cjenik>
